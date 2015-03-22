@@ -1,0 +1,6 @@
+Clock Blue					+2 sec
+Clock Black					+3 sec
+Fire Extinguisher			no fire
+Chest						2 coins
+Guitar						Music
+Slot machine				-5~5 coins

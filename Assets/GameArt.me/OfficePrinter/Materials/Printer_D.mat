@@ -1,0 +1,93 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: Printer_D
+  m_Shader: {fileID: 4800000, guid: 50692aae2d773a34c849bebe0882870d, type: 3}
+  m_ShaderKeywords: []
+  m_CustomRenderQueue: -1
+  m_SavedProperties:
+    serializedVersion: 2
+    m_TexEnvs:
+      data:
+        first:
+          name: _MainTex
+        second:
+          m_Texture: {fileID: 2800000, guid: 586a371f0bb782644aa180eca16caeee, type: 3}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _BumpMap
+        second:
+          m_Texture: {fileID: 2800000, guid: 07af4683f69ced143a173fbef0ce5447, type: 3}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _ParallaxMap
+        second:
+          m_Texture: {fileID: 2800000, guid: dc1e75c5d47b879479ed0a2a8aad958d, type: 3}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _SpecularMap
+        second:
+          m_Texture: {fileID: 2800000, guid: 8e6800456ebaa8341850742772e1106a, type: 3}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _EmissiveTex
+        second:
+          m_Texture: {fileID: 2800000, guid: 6ae3403e33f5dd54fb7570efdaa14b8a, type: 3}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _Cube
+        second:
+          m_Texture: {fileID: 8900000, guid: 37fa1c4ec0ca2a5418eec72682db9289, type: 2}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _PolishTex
+        second:
+          m_Texture: {fileID: 2800000, guid: 8e6800456ebaa8341850742772e1106a, type: 3}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _EmissiveMap
+        second:
+          m_Texture: {fileID: 2800000, guid: 2d2c44c3d1a2d6f47b29bda03f8c5a1e, type: 3}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+    m_Floats:
+      data:
+        first:
+          name: _Parallax
+        second: .00307692238
+      data:
+        first:
+          name: _GlossMultiplier
+        second: 0
+      data:
+        first:
+          name: _PolishMultiplier
+        second: .0961538553
+      data:
+        first:
+          name: _PolishPower
+        second: 1.53846157
+    m_Colors:
+      data:
+        first:
+          name: _Color
+        second: {r: .522388101, g: .522388101, b: .522388101, a: 1}
