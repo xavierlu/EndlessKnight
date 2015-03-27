@@ -6,6 +6,7 @@ public class MixLevel : MonoBehaviour {
 	public AudioMixer MasterMixer;
 	public void SetSfxLevel(float sfxLvl){
 		MasterMixer.SetFloat ("sfxVol", sfxLvl);
+
 	} 
 
 	public void SetMusicLevel(float MusicLvl){

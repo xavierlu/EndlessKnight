@@ -10,16 +10,21 @@ public class TileMap : MonoBehaviour {
 	public GameObject coinsManager;
 	public GameObject fire;
 	public AudioClip[] coinSound; int coinSoundSelection = 0;
+	public AudioMixer MasterMixer;
 	public GameObject[] BackgroundSound;
 	public Text currentScoreText;
-	bool stillHasTime = true;
-	bool getGamePiece = false;
-	bool isHaveExtinguisher = false;
- 	public int mapSizeX = 5;
+	public int mapSizeX = 5;
 	public int mapSizeY = 5;
 	public int currGamePiece = 4;
 	public int AdCycle = 6;
 	public int TimeToRestart = 5;
+	public Animator breakRecordAnim;
+	public CountDown CD;
+	public GameOver GameO;
+	public float smooth = 5.5f;
+	bool stillHasTime = true;
+	bool getGamePiece = false;
+	bool isHaveExtinguisher = false;
 	int AddCoin = 1;
 	int currentScore = 0;
 	int playerCurrPositionX;
@@ -28,17 +33,13 @@ public class TileMap : MonoBehaviour {
 	int TargetY;
 	int obstacleX = 0;
 	int obstacleY = 0;
-	public float smooth = 5.5f;
 	bool[,] fireGO = new bool[9,9];
 	GameObject[,] go = new GameObject[9,9];
 	GameObject playerGO;
 	GameObject TargetGO;
 	AudioSource source;
 	Coins myCoin;
-	public Animator breakRecordAnim;
-	public CountDown CD;
-	public GameOver GameO;
-
+	bool flag = false;
 	//void OnGUI(){
 	//	if(GUI.Button(new Rect(500f,500f,300f,200f),"$100")){
 	//		PlayerPrefs.SetInt("Coins",PlayerPrefs.GetInt("Coins")+100);
@@ -46,16 +47,15 @@ public class TileMap : MonoBehaviour {
 	//}
 
 	void Start() {
+		MasterMixer.SetFloat ("sfxVol", 0.0f);
+		MasterMixer.SetFloat ("musicVol", -10.0f);
 		GenerateMapVisual();
 		InstantiateTargetTile ();
 		myCoin = (Coins)coinsManager.GetComponent<Coins> ();
 		Advertisement.Initialize ("131625271", false);
-		if (PlayerPrefs.GetInt("AdCount") == AdCycle){
-			Advertisement.Show ();
-			PlayerPrefs.SetInt("AdCount",1);
-		}
-		else
+		if (PlayerPrefs.GetInt("AdCount") != 6 && !Advertisement.isShowing)
 			PlayerPrefs.SetInt("AdCount",PlayerPrefs.GetInt("AdCount")+1);
+		Debug.LogError (PlayerPrefs.GetInt("AdCount"));
 		if (!getGamePiece) {
 			currGamePiece = PlayerPrefs.GetInt("SelectedGamePiece");
 			Advantage();
@@ -68,8 +68,18 @@ public class TileMap : MonoBehaviour {
 	}
 
 	void Update(){
-		if (GameO.time <= 0)
+		if (GameO.time <= 0 ){
 			stillHasTime = false;
+		}
+		if (PlayerPrefs.GetInt("AdCount") == 6 && !flag) {
+			PlayerPrefs.SetInt("AdCount",1);
+			flag = true;
+			Advertisement.Show ("rewardedVideoZone");
+		}
+	}
+
+	void OnExit(){
+		PlayerPrefs.SetInt("AdCount",4);
 	}
 
 	void Advantage(){
@@ -91,15 +101,20 @@ public class TileMap : MonoBehaviour {
 			break;
 		case 11:
 			TimeToRestart = 7;
+			coinSoundSelection = 5;
 			break;
 		case 12:
 			TimeToRestart = 8;
+			coinSoundSelection = 6;
 			break;
 		case 13:
 			AddCoin = 2;
 			break;
 		case 14:
 			isHaveExtinguisher = true;
+			break;
+		case 15:
+			coinSoundSelection = 4;
 			break;
 		case 16:
 			Instantiate(BackgroundSound[4], new Vector3(4.5f,0f,4.5f), Quaternion.identity);
