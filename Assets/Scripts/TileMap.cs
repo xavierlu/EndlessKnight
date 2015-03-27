@@ -53,8 +53,6 @@ public class TileMap : MonoBehaviour {
 		InstantiateTargetTile ();
 		myCoin = (Coins)coinsManager.GetComponent<Coins> ();
 		Advertisement.Initialize ("131625271", false);
-		if (PlayerPrefs.GetInt("AdCount") != 6 && !Advertisement.isShowing)
-			PlayerPrefs.SetInt("AdCount",PlayerPrefs.GetInt("AdCount")+1);
 		Debug.LogError (PlayerPrefs.GetInt("AdCount"));
 		if (!getGamePiece) {
 			currGamePiece = PlayerPrefs.GetInt("SelectedGamePiece");
@@ -76,6 +74,8 @@ public class TileMap : MonoBehaviour {
 			flag = true;
 			Advertisement.Show ("rewardedVideoZone");
 		}
+		else if (PlayerPrefs.GetInt("AdCount") != 6 && !Advertisement.isShowing)
+			PlayerPrefs.SetInt("AdCount",PlayerPrefs.GetInt("AdCount")+1);
 	}
 
 	void OnExit(){

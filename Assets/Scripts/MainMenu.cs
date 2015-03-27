@@ -32,7 +32,6 @@ public class MainMenu : MonoBehaviour {
 
 	public void help(){
 		helpPage.enabled = !helpPage.enabled;
-		PlayerPrefs.SetInt ("isUsedHelp",1);
 	}
 
 	void pauseTime(){
