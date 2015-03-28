@@ -7,9 +7,7 @@ public class Shop : MonoBehaviour {
 	int gamePiece = 0;
 	public Canvas confirmCanvas;
 	public Text confirmText;
-	void Start(){
-
-	}
+	public Button backButton;
 
 	public void BuyWhiteKnight(){
 		PlayerPrefs.SetInt ("SelectedGamePiece",0);
@@ -191,9 +189,22 @@ public class Shop : MonoBehaviour {
 		}
 	}
 
+	public void BuyBillBoard(bool TorF){
+		if (!TorF)
+			Confirm(1000,17);
+		else{
+			if (PlayerPrefs.GetInt ("Coins") >= 1000) {
+				PlayerPrefs.SetInt ("Coins", PlayerPrefs.GetInt("Coins")-1000);
+				PlayerPrefs.SetInt ("SelectedGamePiece",17);
+			}
+		}
+	}
+
 	public void Confirm(int num, int gameP){
+		backButton.enabled = false;
+		backButton.image.enabled = false;
 		confirmCanvas.enabled = true;
-		confirmText.text = "Confirm? $" + num;
+		confirmText.text = "Confirm? ¢" + num;
 		gamePiece = gameP;
 	}
 
@@ -251,8 +262,13 @@ public class Shop : MonoBehaviour {
 			case 16:
 				BuyPiano(true);
 				break;
+			case 17:
+				BuyBillBoard(true);
+				break;
 			}		
 		}
+		backButton.enabled = true;
+		backButton.image.enabled = true;
 		confirmCanvas.enabled = false;
 	}
 	//SelectedGamePiece

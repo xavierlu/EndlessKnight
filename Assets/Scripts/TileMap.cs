@@ -9,6 +9,7 @@ public class TileMap : MonoBehaviour {
 	public GameObject Target;
 	public GameObject coinsManager;
 	public GameObject fire;
+	public Camera[] cams;
 	public AudioClip[] coinSound; int coinSoundSelection = 0;
 	public AudioMixer MasterMixer;
 	public GameObject[] BackgroundSound;
@@ -39,7 +40,7 @@ public class TileMap : MonoBehaviour {
 	GameObject TargetGO;
 	AudioSource source;
 	Coins myCoin;
-	bool flag = false;
+	bool flag = false,AdSetting = false;
 	//void OnGUI(){
 	//	if(GUI.Button(new Rect(500f,500f,300f,200f),"$100")){
 	//		PlayerPrefs.SetInt("Coins",PlayerPrefs.GetInt("Coins")+100);
@@ -47,6 +48,8 @@ public class TileMap : MonoBehaviour {
 	//}
 
 	void Start() {
+		if (PlayerPrefs.GetInt("AdCount") != 9 && !Advertisement.isShowing)
+			PlayerPrefs.SetInt("AdCount",PlayerPrefs.GetInt("AdCount")+1);
 		MasterMixer.SetFloat ("sfxVol", 0.0f);
 		MasterMixer.SetFloat ("musicVol", -10.0f);
 		GenerateMapVisual();
@@ -69,13 +72,13 @@ public class TileMap : MonoBehaviour {
 		if (GameO.time <= 0 ){
 			stillHasTime = false;
 		}
-		if (PlayerPrefs.GetInt("AdCount") == 6 && !flag) {
+		if (PlayerPrefs.GetInt("AdCount") == 9 && !flag) {
 			PlayerPrefs.SetInt("AdCount",1);
 			flag = true;
-			Advertisement.Show ("rewardedVideoZone");
+			if(AdSetting)
+				Advertisement.Show ("rewardedVideoZone");
+
 		}
-		else if (PlayerPrefs.GetInt("AdCount") != 6 && !Advertisement.isShowing)
-			PlayerPrefs.SetInt("AdCount",PlayerPrefs.GetInt("AdCount")+1);
 	}
 
 	void OnExit(){
@@ -83,7 +86,9 @@ public class TileMap : MonoBehaviour {
 	}
 
 	void Advantage(){
-		switch(currGamePiece){
+		switch(currGamePiece){//150240160
+		case 0:
+			break;
 		case 2:
 			Instantiate(BackgroundSound[3], new Vector3(4.5f,10f,4.5f), Quaternion.identity);
 			break;
@@ -118,6 +123,9 @@ public class TileMap : MonoBehaviour {
 			break;
 		case 16:
 			Instantiate(BackgroundSound[4], new Vector3(4.5f,0f,4.5f), Quaternion.identity);
+			break;
+		case 17:
+			AdSetting = true;
 			break;
 		}
 	}

@@ -12,7 +12,7 @@ public class Coins : MonoBehaviour {
 	}
 
 	void Update () {
-		text.text = "$"+PlayerPrefs.GetInt("Coins");
+		text.text = "¢"+PlayerPrefs.GetInt("Coins");
 	}
 
 	public void AddCoins(int amt){
