@@ -41,11 +41,11 @@ public class TileMap : MonoBehaviour {
 	AudioSource source;
 	Coins myCoin;
 	bool flag = false,AdSetting = false;
-	//void OnGUI(){
-	//	if(GUI.Button(new Rect(500f,500f,300f,200f),"$100")){
-	//		PlayerPrefs.SetInt("Coins",PlayerPrefs.GetInt("Coins")+100);
-	//	}
-	//}
+	void OnGUI(){
+		if(GUI.Button(new Rect(500f,500f,300f,200f),"$100")){
+			PlayerPrefs.SetInt("Coins",PlayerPrefs.GetInt("Coins")+100);
+		}
+	}
 
 	void Start() {
 		if (PlayerPrefs.GetInt("AdCount") != 9 && !Advertisement.isShowing)
@@ -69,34 +69,55 @@ public class TileMap : MonoBehaviour {
 	}
 
 	void Update(){
+		if (Input.GetKeyDown(KeyCode.Escape)) Application.Quit(); 
 		if (GameO.time <= 0 ){
 			stillHasTime = false;
 		}
 		if (PlayerPrefs.GetInt("AdCount") == 9 && !flag) {
 			PlayerPrefs.SetInt("AdCount",1);
 			flag = true;
-			if(AdSetting)
+			if(!AdSetting)
 				Advertisement.Show ("rewardedVideoZone");
-
 		}
 	}
-
 	void OnExit(){
 		PlayerPrefs.SetInt("AdCount",4);
 	}
-
 	void Advantage(){
 		switch(currGamePiece){//150240160
 		case 0:
 			break;
+		case 1:
+			for (int i = 0; i < 3; i++){
+				cams[i].backgroundColor = new Color (0.870588f,0.721569f,0.529412f);
+			}
+			break;
 		case 2:
 			Instantiate(BackgroundSound[3], new Vector3(4.5f,10f,4.5f), Quaternion.identity);
+			break;
+		case 3:
+			for (int i = 0; i < 3; i++){
+				cams[i].backgroundColor = new Color (0.956863f,0.643137f,0.376471f);
+			}
+			break;
+		case 4:
+			for (int i = 0; i < 3; i++){
+				cams[i].backgroundColor = new Color (1f,0.54902f,0f);
+			}
 			break;
 		case 5:
 			Instantiate(BackgroundSound[Random.Range(0,3)],new Vector3(4.5f,0f,4.5f),Quaternion.identity);
 			break;
+		case 6:
+			for (int i = 0; i < 3; i++){
+				cams[i].backgroundColor = new Color (1f,0.270588f,0f);
+			}
+			break;
 		case 7:
 			coinSoundSelection = 1;
+			for (int i = 0; i < 3; i++){
+				cams[i].backgroundColor = new Color (0.827451f,0.827451f,0.827451f);
+			}
 			break;
 		case 8:
 			coinSoundSelection = 2;
@@ -104,15 +125,29 @@ public class TileMap : MonoBehaviour {
 		case 9:
 			coinSoundSelection = 3;
 			break;
+		case 10:
+			for (int i = 0; i < 3; i++){
+				cams[i].backgroundColor = new Color (0.690196f,0.768627f,0.870588f);
+			}
+			break;
 		case 11:
+			for (int i = 0; i < 3; i++){
+				cams[i].backgroundColor = new Color (0.690196f,0.878431f,0.901961f);
+			}
 			TimeToRestart = 7;
 			coinSoundSelection = 5;
 			break;
 		case 12:
+			for (int i = 0; i < 3; i++){
+				cams[i].backgroundColor = new Color (0.690196f,0.878431f,0.901961f);
+			}
 			TimeToRestart = 8;
 			coinSoundSelection = 6;
 			break;
 		case 13:
+			for (int i = 0; i < 3; i++){
+				cams[i].backgroundColor = new Color (0.870588f,0.721569f,0.529412f);
+			}
 			AddCoin = 2;
 			break;
 		case 14:
@@ -123,6 +158,9 @@ public class TileMap : MonoBehaviour {
 			break;
 		case 16:
 			Instantiate(BackgroundSound[4], new Vector3(4.5f,0f,4.5f), Quaternion.identity);
+			for (int i = 0; i < 3; i++){
+				cams[i].backgroundColor = new Color (0.839216f,0.839216f,0.839216f);
+			}
 			break;
 		case 17:
 			AdSetting = true;

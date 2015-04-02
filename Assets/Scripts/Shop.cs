@@ -14,188 +14,240 @@ public class Shop : MonoBehaviour {
 	}
 
 	public void BuyCube(bool TorF){
-		if (!TorF)
-			Confirm (20,1);
-		else {
-		if (PlayerPrefs.GetInt ("Coins") >= 20) {
-			PlayerPrefs.SetInt ("Coins", PlayerPrefs.GetInt("Coins")-20);
+		if (PlayerPrefs.GetString("BroughtGamePiece").Contains("cube"))
 			PlayerPrefs.SetInt ("SelectedGamePiece",1);
+		else if (!TorF)
+			Confirm (100,1);
+		else {
+			if (PlayerPrefs.GetInt ("Coins") >= 100) {
+				PlayerPrefs.SetInt ("Coins", PlayerPrefs.GetInt("Coins")-100);
+				PlayerPrefs.SetInt ("SelectedGamePiece",1);
+				PlayerPrefs.SetString("BroughtGamePiece",PlayerPrefs.GetString("BroughtGamePiece")+"cube");
 			}
 		}
 	}
 
 	public void BuyPlant(bool TorF){
-		if (!TorF)
-			Confirm (30,2);
-		else {
-		if (PlayerPrefs.GetInt ("Coins") >= 30) {
-			PlayerPrefs.SetInt ("Coins", PlayerPrefs.GetInt("Coins")-30);
+		if (PlayerPrefs.GetString("BroughtGamePiece").Contains("plant"))
 			PlayerPrefs.SetInt ("SelectedGamePiece",2);
+		else if (!TorF)
+			Confirm (100,2);
+		else {
+			if (PlayerPrefs.GetInt ("Coins") >= 100) {
+				PlayerPrefs.SetInt ("Coins", PlayerPrefs.GetInt("Coins")-100);
+				PlayerPrefs.SetInt ("SelectedGamePiece",2);
+				PlayerPrefs.SetString("BroughtGamePiece",PlayerPrefs.GetString("BroughtGamePiece")+"plant");
 			}
 		}
 	}
 
 	public void BuyBook(bool TorF){
-		if (!TorF)
-			Confirm (40,3);
-		else {
-		if (PlayerPrefs.GetInt ("Coins") >= 40) {
-			PlayerPrefs.SetInt ("Coins", PlayerPrefs.GetInt("Coins")-40);
+		if (PlayerPrefs.GetString("BroughtGamePiece").Contains("book"))
 			PlayerPrefs.SetInt ("SelectedGamePiece",3);
+		else if (!TorF)
+			Confirm (100,3);
+		else {
+			if (PlayerPrefs.GetInt ("Coins") >= 100) {
+				PlayerPrefs.SetInt ("Coins", PlayerPrefs.GetInt("Coins")-100);
+				PlayerPrefs.SetInt ("SelectedGamePiece",3);
+				PlayerPrefs.SetString("BroughtGamePiece",PlayerPrefs.GetString("BroughtGamePiece")+"book");
 			}
 		}
 	}
 
 	public void BuyPostBox(bool TorF){
-		if (!TorF)
-			Confirm (50,4);
-		else {
-		if (PlayerPrefs.GetInt ("Coins") >= 50) {
-			PlayerPrefs.SetInt ("Coins", PlayerPrefs.GetInt("Coins")-50);
+		if (PlayerPrefs.GetString("BroughtGamePiece").Contains("postbox"))
 			PlayerPrefs.SetInt ("SelectedGamePiece",4);
+		else if (!TorF)
+			Confirm (100,4);
+		else {
+			if (PlayerPrefs.GetInt ("Coins") >= 100) {
+				PlayerPrefs.SetInt ("Coins", PlayerPrefs.GetInt("Coins")-100);
+				PlayerPrefs.SetInt ("SelectedGamePiece",4);
+				PlayerPrefs.SetString("BroughtGamePiece",PlayerPrefs.GetString("BroughtGamePiece")+"postbox");
 			}
 		}
 	}
 
 	public void BuyGuitar(bool TorF){
-		if (!TorF)
-			Confirm (60,5);
-		else {
-		if (PlayerPrefs.GetInt ("Coins") >= 60) {
-			PlayerPrefs.SetInt ("Coins", PlayerPrefs.GetInt("Coins")-60);
+		if (PlayerPrefs.GetString("BroughtGamePiece").Contains("guitar"))
 			PlayerPrefs.SetInt ("SelectedGamePiece",5);
+		else if (!TorF)
+			Confirm (100,5);
+		else {
+			if (PlayerPrefs.GetInt ("Coins") >= 100) {
+				PlayerPrefs.SetInt ("Coins", PlayerPrefs.GetInt("Coins")-100);
+				PlayerPrefs.SetInt ("SelectedGamePiece",5);
+				PlayerPrefs.SetString("BroughtGamePiece",PlayerPrefs.GetString("BroughtGamePiece")+"guitar");
 			}
 		}
 	}
 
 	public void BuyGasBottle(bool TorF){
-		if (!TorF)
-			Confirm (70,6);
-		else {
-		if (PlayerPrefs.GetInt ("Coins") >= 70) {
-			PlayerPrefs.SetInt ("Coins", PlayerPrefs.GetInt("Coins")-70);
+		if (PlayerPrefs.GetString("BroughtGamePiece").Contains("gasbottle"))
 			PlayerPrefs.SetInt ("SelectedGamePiece",6);
+		else if (!TorF)
+			Confirm (100,6);
+		else {
+			if (PlayerPrefs.GetInt ("Coins") >= 100) {
+				PlayerPrefs.SetInt ("Coins", PlayerPrefs.GetInt("Coins")-100);
+				PlayerPrefs.SetInt ("SelectedGamePiece",6);
+				PlayerPrefs.SetString("BroughtGamePiece",PlayerPrefs.GetString("BroughtGamePiece")+"gasbottle");
 			}
 		}
 	}
 
 	public void BuyToilet(bool TorF){
-		if (!TorF)
-			Confirm (80,7);
-		else {
-		if (PlayerPrefs.GetInt ("Coins") >= 80) {
-			PlayerPrefs.SetInt ("Coins", PlayerPrefs.GetInt("Coins")-80);
+		if (PlayerPrefs.GetString("BroughtGamePiece").Contains("toilet"))
 			PlayerPrefs.SetInt ("SelectedGamePiece",7);
+		else if (!TorF)
+			Confirm (100,7);
+		else {
+			if (PlayerPrefs.GetInt ("Coins") >= 100) {
+				PlayerPrefs.SetInt ("Coins", PlayerPrefs.GetInt("Coins")-100);
+			PlayerPrefs.SetInt ("SelectedGamePiece",7);
+				PlayerPrefs.SetString("BroughtGamePiece",PlayerPrefs.GetString("BroughtGamePiece")+"toilet");
 			}
 		}
 	}
 
 	public void BuyVendingMachine(bool TorF){
-		if (!TorF)
-			Confirm (90,8);
-		else {
-		if (PlayerPrefs.GetInt ("Coins") >= 90) {
-			PlayerPrefs.SetInt ("Coins", PlayerPrefs.GetInt("Coins")-90);
+		if (PlayerPrefs.GetString("BroughtGamePiece").Contains("vendingmachine"))
 			PlayerPrefs.SetInt ("SelectedGamePiece",8);
+		else if (!TorF)
+			Confirm (100,8);
+		else {
+			if (PlayerPrefs.GetInt ("Coins") >= 100) {
+				PlayerPrefs.SetInt ("Coins", PlayerPrefs.GetInt("Coins")-100);
+			PlayerPrefs.SetInt ("SelectedGamePiece",8);
+				PlayerPrefs.SetString("BroughtGamePiece",PlayerPrefs.GetString("BroughtGamePiece")+"vendingmachine");
 			}
 		}
 	}
 
 	public void BuyKnuckle(bool TorF){
-		if (!TorF)
+		if (PlayerPrefs.GetString("BroughtGamePiece").Contains("knuckle"))
+			PlayerPrefs.SetInt ("SelectedGamePiece",9);
+		else if (!TorF)
 			Confirm (100,9);
 		else {
 		if (PlayerPrefs.GetInt ("Coins") >= 100) {
 			PlayerPrefs.SetInt ("Coins", PlayerPrefs.GetInt("Coins")-100);
 			PlayerPrefs.SetInt ("SelectedGamePiece",9);
+				PlayerPrefs.SetString("BroughtGamePiece",PlayerPrefs.GetString("BroughtGamePiece")+"knuckle");
 			}
 		}
 	}
 	
 	public void BuyWrench(bool TorF){
-		if (!TorF)
-			Confirm (110,10);
-		else {
-		if (PlayerPrefs.GetInt ("Coins") >= 110) {
-			PlayerPrefs.SetInt ("Coins", PlayerPrefs.GetInt("Coins")-110);
+		if (PlayerPrefs.GetString("BroughtGamePiece").Contains("wrench"))
 			PlayerPrefs.SetInt ("SelectedGamePiece",10);
+		else if (!TorF)
+			Confirm (100,10);
+		else {
+			if (PlayerPrefs.GetInt ("Coins") >= 100) {
+				PlayerPrefs.SetInt ("Coins", PlayerPrefs.GetInt("Coins")-100);
+			PlayerPrefs.SetInt ("SelectedGamePiece",10);
+				PlayerPrefs.SetString("BroughtGamePiece",PlayerPrefs.GetString("BroughtGamePiece")+"wrench");
 			}
 		}
 	}
 
 	public void BuyPiano(bool TorF){
-		if (!TorF)
-			Confirm (10,16);
+		if (PlayerPrefs.GetString("BroughtGamePiece").Contains("piano"))
+			PlayerPrefs.SetInt ("SelectedGamePiece",16);
+		else if (!TorF)
+			Confirm (100,16);
 		else {
-			if (PlayerPrefs.GetInt ("Coins") >= 10) {
-				PlayerPrefs.SetInt ("Coins", PlayerPrefs.GetInt("Coins")-10);
+			if (PlayerPrefs.GetInt ("Coins") >= 100) {
+				PlayerPrefs.SetInt ("Coins", PlayerPrefs.GetInt("Coins")-100);
 				PlayerPrefs.SetInt ("SelectedGamePiece",16);
+				PlayerPrefs.SetString("BroughtGamePiece",PlayerPrefs.GetString("BroughtGamePiece")+"piano");
 			}
 		}
 	}
 
 	public void BuyBathTube(bool TorF){
-		if (!TorF)
-			Confirm (10,11);
+		if (PlayerPrefs.GetString("BroughtGamePiece").Contains("bathtub"))
+			PlayerPrefs.SetInt ("SelectedGamePiece",11);
+		else if (!TorF)
+			Confirm (175,11);
 		else {
-			if (PlayerPrefs.GetInt ("Coins") >= 10) {
-				PlayerPrefs.SetInt ("Coins", PlayerPrefs.GetInt("Coins")-10);
+			if (PlayerPrefs.GetInt ("Coins") >= 175) {
+				PlayerPrefs.SetInt ("Coins", PlayerPrefs.GetInt("Coins")-175);
 				PlayerPrefs.SetInt ("SelectedGamePiece",11);
+				PlayerPrefs.SetString("BroughtGamePiece",PlayerPrefs.GetString("BroughtGamePiece")+"bathtub");
 			}
 		}
 	}
 
 	public void BuyPrinter(bool TorF){
-		if (!TorF)
-			Confirm (10,12);
-		else {
-			if (PlayerPrefs.GetInt ("Coins") >= 10) {
-			PlayerPrefs.SetInt ("Coins", PlayerPrefs.GetInt("Coins")-10);
+		if (PlayerPrefs.GetString("BroughtGamePiece").Contains("printer"))
 			PlayerPrefs.SetInt ("SelectedGamePiece",12);
+		else if (!TorF)
+			Confirm (100,12);
+		else {
+			if (PlayerPrefs.GetInt ("Coins") >= 100) {
+				PlayerPrefs.SetInt ("Coins", PlayerPrefs.GetInt("Coins")-100);
+				PlayerPrefs.SetInt ("SelectedGamePiece",12);
+				PlayerPrefs.SetString("BroughtGamePiece",PlayerPrefs.GetString("BroughtGamePiece")+"printer");
 			}
 		}
 	}
 
 	public void BuyChest(bool TorF){
-		if (!TorF)
-			Confirm (10,13);
+		if (PlayerPrefs.GetString("BroughtGamePiece").Contains("chest"))
+			PlayerPrefs.SetInt ("SelectedGamePiece",13);
+		else if (!TorF)
+			Confirm (225,13);
 		else {
-			if (PlayerPrefs.GetInt ("Coins") >= 10) {
-				PlayerPrefs.SetInt ("Coins", PlayerPrefs.GetInt ("Coins") - 10);
+			if (PlayerPrefs.GetInt ("Coins") >= 225) {
+				PlayerPrefs.SetInt ("Coins", PlayerPrefs.GetInt ("Coins") - 225);
 				PlayerPrefs.SetInt ("SelectedGamePiece", 13);
+				PlayerPrefs.SetString("BroughtGamePiece",PlayerPrefs.GetString("BroughtGamePiece")+"printer");
+
 			}
 		}
 	}
 	
 	public void BuyExtinguisher(bool TorF){
-		if (!TorF)
-			Confirm(10,14);
+		if (PlayerPrefs.GetString("BroughtGamePiece").Contains("extinguisher"))
+			PlayerPrefs.SetInt ("SelectedGamePiece",14);
+		else if (!TorF)
+			Confirm(200,14);
 		else{
-			if (PlayerPrefs.GetInt ("Coins") >= 10) {
-				PlayerPrefs.SetInt ("Coins", PlayerPrefs.GetInt("Coins")-10);
+			if (PlayerPrefs.GetInt ("Coins") >= 200) {
+				PlayerPrefs.SetInt ("Coins", PlayerPrefs.GetInt("Coins")-200);
 				PlayerPrefs.SetInt ("SelectedGamePiece",14);
+				PlayerPrefs.SetString("BroughtGamePiece",PlayerPrefs.GetString("BroughtGamePiece")+"extinguisher");
 			}
 		}
 	}
 	
 	public void BuySlotMachine(bool TorF){
-		if (!TorF)
-			Confirm(10,15);
+		if (PlayerPrefs.GetString("BroughtGamePiece").Contains("slotmachine"))
+			PlayerPrefs.SetInt ("SelectedGamePiece",15);
+		else if (!TorF)
+			Confirm(200,15);
 		else{
-			if (PlayerPrefs.GetInt ("Coins") >= 10) {
-				PlayerPrefs.SetInt ("Coins", PlayerPrefs.GetInt("Coins")-10);
+			if (PlayerPrefs.GetInt ("Coins") >= 200) {
+				PlayerPrefs.SetInt ("Coins", PlayerPrefs.GetInt("Coins")-200);
 				PlayerPrefs.SetInt ("SelectedGamePiece",15);
+				PlayerPrefs.SetString("BroughtGamePiece",PlayerPrefs.GetString("BroughtGamePiece")+"slotmachine");
 			}
 		}
 	}
 
 	public void BuyBillBoard(bool TorF){
-		if (!TorF)
-			Confirm(1000,17);
+		if (PlayerPrefs.GetString("BroughtGamePiece").Contains("billboard"))
+			PlayerPrefs.SetInt ("SelectedGamePiece",15);
+		else if (!TorF)
+			Confirm(9999,17);
 		else{
-			if (PlayerPrefs.GetInt ("Coins") >= 1000) {
-				PlayerPrefs.SetInt ("Coins", PlayerPrefs.GetInt("Coins")-1000);
+			if (PlayerPrefs.GetInt ("Coins") >= 9999) {
+				PlayerPrefs.SetInt ("Coins", PlayerPrefs.GetInt("Coins")-9999);
 				PlayerPrefs.SetInt ("SelectedGamePiece",17);
+				PlayerPrefs.SetString("BroughtGamePiece",PlayerPrefs.GetString("BroughtGamePiece")+"billboard");
 			}
 		}
 	}

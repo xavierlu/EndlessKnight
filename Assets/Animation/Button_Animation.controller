@@ -628,6 +628,23 @@ AnimatorState:
   m_Mirror: 0
   m_Motion: {fileID: 0}
   m_Tag: 
+--- !u!1102 &110250610
+AnimatorState:
+  serializedVersion: 5
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: FreeCoinsClip
+  m_Speed: 1
+  m_CycleOffset: 0
+  m_Transitions: []
+  m_StateMachineBehaviours: []
+  m_Position: {x: 50, y: 50, z: 0}
+  m_IKOnFeet: 0
+  m_WriteDefaultValues: 1
+  m_Mirror: 0
+  m_Motion: {fileID: 7400000, guid: e0087825141f1cc46975e7ca718544a9, type: 2}
+  m_Tag: 
 --- !u!1102 &110252368
 AnimatorState:
   serializedVersion: 5
@@ -727,6 +744,9 @@ AnimatorStateMachine:
   - serializedVersion: 1
     m_State: {fileID: 110227834}
     m_Position: {x: 492, y: 24, z: 0}
+  - serializedVersion: 1
+    m_State: {fileID: 110250610}
+    m_Position: {x: 527, y: 89, z: 0}
   m_ChildStateMachines: []
   m_AnyStateTransitions:
   - {fileID: 110152374}
