@@ -41,11 +41,11 @@ public class TileMap : MonoBehaviour {
 	AudioSource source;
 	Coins myCoin;
 	bool flag = false,AdSetting = false;
-	void OnGUI(){
-		if(GUI.Button(new Rect(500f,500f,300f,200f),"$100")){
-			PlayerPrefs.SetInt("Coins",PlayerPrefs.GetInt("Coins")+100);
-		}
-	}
+	//void OnGUI(){
+	//	if(GUI.Button(new Rect(500f,500f,300f,200f),"$100")){
+	//		PlayerPrefs.SetInt("Coins",PlayerPrefs.GetInt("Coins")+100);
+	//	}
+	//}
 
 	void Start() {
 		if (PlayerPrefs.GetInt("AdCount") != 9 && !Advertisement.isShowing)

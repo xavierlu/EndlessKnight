@@ -129,10 +129,10 @@ public class Shop : MonoBehaviour {
 		if (PlayerPrefs.GetString("BroughtGamePiece").Contains("knuckle"))
 			PlayerPrefs.SetInt ("SelectedGamePiece",9);
 		else if (!TorF)
-			Confirm (100,9);
+			Confirm (200,9);
 		else {
-		if (PlayerPrefs.GetInt ("Coins") >= 100) {
-			PlayerPrefs.SetInt ("Coins", PlayerPrefs.GetInt("Coins")-100);
+		if (PlayerPrefs.GetInt ("Coins") >= 200) {
+			PlayerPrefs.SetInt ("Coins", PlayerPrefs.GetInt("Coins")-200);
 			PlayerPrefs.SetInt ("SelectedGamePiece",9);
 				PlayerPrefs.SetString("BroughtGamePiece",PlayerPrefs.GetString("BroughtGamePiece")+"knuckle");
 			}
@@ -157,10 +157,10 @@ public class Shop : MonoBehaviour {
 		if (PlayerPrefs.GetString("BroughtGamePiece").Contains("piano"))
 			PlayerPrefs.SetInt ("SelectedGamePiece",16);
 		else if (!TorF)
-			Confirm (100,16);
+			Confirm (115,16);
 		else {
-			if (PlayerPrefs.GetInt ("Coins") >= 100) {
-				PlayerPrefs.SetInt ("Coins", PlayerPrefs.GetInt("Coins")-100);
+			if (PlayerPrefs.GetInt ("Coins") >= 115) {
+				PlayerPrefs.SetInt ("Coins", PlayerPrefs.GetInt("Coins")-115);
 				PlayerPrefs.SetInt ("SelectedGamePiece",16);
 				PlayerPrefs.SetString("BroughtGamePiece",PlayerPrefs.GetString("BroughtGamePiece")+"piano");
 			}
