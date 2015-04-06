@@ -2,6 +2,7 @@
 using UnityEngine.UI;
 using UnityEngine.Advertisements;
 using UnityEngine.Audio;
+using UnityEngine.Events;
 using System.Collections;
 public class TileMap : MonoBehaviour {
 	public GameObject[] selectedUnit;
@@ -41,11 +42,6 @@ public class TileMap : MonoBehaviour {
 	AudioSource source;
 	Coins myCoin;
 	bool flag = false,AdSetting = false;
-	//void OnGUI(){
-	//	if(GUI.Button(new Rect(500f,500f,300f,200f),"$100")){
-	//		PlayerPrefs.SetInt("Coins",PlayerPrefs.GetInt("Coins")+100);
-	//	}
-	//}
 
 	void Start() {
 		if (PlayerPrefs.GetInt("AdCount") != 9 && !Advertisement.isShowing)
@@ -79,9 +75,6 @@ public class TileMap : MonoBehaviour {
 			if(!AdSetting)
 				Advertisement.Show ("rewardedVideoZone");
 		}
-	}
-	void OnExit(){
-		PlayerPrefs.SetInt("AdCount",4);
 	}
 	void Advantage(){
 		switch(currGamePiece){//150240160
@@ -277,5 +270,39 @@ public class TileMap : MonoBehaviour {
 
 		float slope = (float)((y22-y11)/(x22-x11)) ;
 		return slope;
+	}
+		
+	public void FBShare(){
+		ShareToFacebook ("http://www.facebook.com/", "Endless Knight", "Come, download and play Endless Knight!",
+		                 "My high score is "+PlayerPrefs.GetInt("HighScore")+" in Endless Knight. Can you beat me ;)", "http://i57.tinypic.com/ftfrjm.jpg"
+		                 , "http://www.facebook.com/");
+	}
+
+
+	public void TwitterShare(){
+		ShareToT ("My high score is " + PlayerPrefs.GetInt ("HighScore") + " in Endless Knight. Can you beat me ;)", "http://twitter.com/", " ","en");
+	}
+	const string AppId = "830811490287964";
+	private const string FACEBOOK_URL = "http://www.facebook.com/dialog/feed";
+	void ShareToFacebook (string linkParameter, string nameParameter, string captionParameter, string descriptionParameter, string pictureParameter, string redirectParameter)
+	{
+		Application.OpenURL (FACEBOOK_URL + "?app_id=" + AppId +
+		                     "&link=" + WWW.EscapeURL(linkParameter) +
+		                     "&name=" + WWW.EscapeURL(nameParameter) +
+		                     "&caption=" + WWW.EscapeURL(captionParameter) + 
+		                     "&description=" + WWW.EscapeURL(descriptionParameter) + 
+		                     "&picture=" + WWW.EscapeURL(pictureParameter) + 
+		                     "&redirect_uri=" + WWW.EscapeURL(redirectParameter));
+	}
+
+	const string Address = "http://twitter.com/intent/tweet";
+	public static void ShareToT(string text, string url,
+	                         string related, string lang="en")
+	{
+		Application.OpenURL(Address +
+		                    "?text=" + WWW.EscapeURL(text) +
+		                    "&amp;url=" + WWW.EscapeURL(url) +
+		                    "&amp;related=" + WWW.EscapeURL(related) +
+		                    "&amp;lang=" + WWW.EscapeURL(lang));
 	}
 }
