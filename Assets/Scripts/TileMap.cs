@@ -238,7 +238,9 @@ public class TileMap : MonoBehaviour {
 
 	public void MoveSelectedUnitTo(int x, int y) {
 		if (stillHasTime && CD.isStarted() && Time.timeScale == 1){
-			if (GetSlope (playerCurrPositionX, playerCurrPositionY, x, y) == 2 || GetSlope (playerCurrPositionX, playerCurrPositionY, x, y) == 0.5 || GetSlope (playerCurrPositionX, playerCurrPositionY, x, y) == -2 || GetSlope (playerCurrPositionX, playerCurrPositionY, x, y) == -0.5) {
+			if ((GetSlope (playerCurrPositionX, playerCurrPositionY, x, y) == 2 || GetSlope (playerCurrPositionX, playerCurrPositionY, x, y) == 0.5 || 
+			    	GetSlope (playerCurrPositionX, playerCurrPositionY, x, y) == -2 || GetSlope (playerCurrPositionX, playerCurrPositionY, x, y) == -0.5) 
+			    		&& Vector3.Distance(new Vector3(playerCurrPositionX,0,playerCurrPositionY),new Vector3(x,0,y)) == Mathf.Sqrt(5.0f)) {
 				playerCurrPositionX = x;
 				playerCurrPositionY = y;
 				playerGO.transform.position = TileCoordToWorldCoord(x,y);	
