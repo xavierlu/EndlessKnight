@@ -178,7 +178,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player:
-  - {fileID: 112650, guid: 0f39bbd69327af9409bdcb9ec336d99b, type: 2}
+  - {fileID: 149158, guid: 2e844be50ea6d46429f99a17790fa611, type: 2}
   - {fileID: 110418, guid: 3ca9f7800bcc6ad439881a4ed8a807ba, type: 2}
   - {fileID: 182808, guid: d3ff14e9b33e046498d16b0528475943, type: 2}
   - {fileID: 142800, guid: 11e1c0f7e489c384f9da2ae863f21c60, type: 2}
@@ -217,7 +217,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 1, g: .819472611, b: .345588207, a: .0392156877}
+  m_BackGroundColor: {r: 1, g: .827450991, b: .513725519, a: 0}
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0

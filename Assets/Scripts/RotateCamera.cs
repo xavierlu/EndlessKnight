@@ -3,8 +3,6 @@ using UnityEngine.UI;
 using System.Collections;
 
 public class RotateCamera : MonoBehaviour {
-	//public Slider slider;
-	//public GameObject camera;
 	public Camera topViewCamera;
 	public Camera normalViewCamera;
 	public Camera backViewCamera;
@@ -16,11 +14,6 @@ public class RotateCamera : MonoBehaviour {
 	void Start(){
 		SwitchToNormalView ();
 	}
-
-	//void Update(){
-	//	float sliderValue = slider.value;
-	//	camera.transform.eulerAngles = new Vector3(0,sliderValue*360, 0);
-	//}
 
 	public void SwitchToTopView(){
 		topViewCamera.enabled = true;

@@ -19,11 +19,12 @@ public class TileMap : MonoBehaviour {
 	public int mapSizeY = 5;
 	public int currGamePiece = 4;
 	public int AdCycle = 6;
-	public int TimeToRestart = 5;
+	public int TimeToRestart;
 	public Animator breakRecordAnim;
 	public CountDown CD;
 	public GameOver GameO;
 	public float smooth = 5.5f;
+	public bool thereIsConnection = false;
 	bool stillHasTime = true;
 	bool getGamePiece = false;
 	bool isHaveExtinguisher = false;
@@ -44,6 +45,7 @@ public class TileMap : MonoBehaviour {
 	bool flag = false,AdSetting = false;
 
 	void Start() {
+		TestConnection ();
 		if (PlayerPrefs.GetInt("AdCount") != 9 && !Advertisement.isShowing)
 			PlayerPrefs.SetInt("AdCount",PlayerPrefs.GetInt("AdCount")+1);
 		MasterMixer.SetFloat ("sfxVol", 0.0f);
@@ -72,12 +74,12 @@ public class TileMap : MonoBehaviour {
 		if (PlayerPrefs.GetInt("AdCount") == 9 && !flag) {
 			PlayerPrefs.SetInt("AdCount",1);
 			flag = true;
-			if(!AdSetting)
+			if(!AdSetting && thereIsConnection)
 				Advertisement.Show ("rewardedVideoZone");
 		}
 	}
 	void Advantage(){
-		switch(currGamePiece){//150240160
+		switch(currGamePiece){
 		case 0:
 			break;
 		case 1:
@@ -157,6 +159,9 @@ public class TileMap : MonoBehaviour {
 			break;
 		case 17:
 			AdSetting = true;
+			break;
+		case 18:
+			coinSoundSelection = 7;
 			break;
 		}
 	}
@@ -306,5 +311,28 @@ public class TileMap : MonoBehaviour {
 		                    "&amp;url=" + WWW.EscapeURL(url) +
 		                    "&amp;related=" + WWW.EscapeURL(related) +
 		                    "&amp;lang=" + WWW.EscapeURL(lang));
+	}
+
+	IEnumerator TestConnection()
+	{
+		float timeTaken = 0.0f;
+		float maxTime = 2.0f;
+		while ( true )
+		{
+			Ping testPing = new Ping( "74.125.79.99" );
+			timeTaken = 0.0f;
+			while ( !testPing.isDone )
+			{	
+				timeTaken += Time.deltaTime;		
+				if ( timeTaken > maxTime )
+				{
+					thereIsConnection = false;
+					break;
+				}
+				yield return null;
+			}
+			if ( timeTaken <= maxTime ) thereIsConnection = true;
+			yield return null;
+		}
 	}
 }

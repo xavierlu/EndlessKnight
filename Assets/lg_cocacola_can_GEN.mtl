@@ -1,0 +1,27 @@
+newmtl Material_Front
+illum 4
+Kd 1.0 1.0 1.0
+Ka 1.0 1.0 1.0
+Ks 0.0 0.0 0.0
+map_Kd lg_cocacola_can.1_OUT.png
+
+newmtl Material_Back
+illum 4
+Kd 1.0 1.0 1.0
+Ka 1.0 1.0 1.0
+Ks 0.0 0.0 0.0
+map_Kd lg_cocacola_can.1_OUT.png
+
+newmtl Material_Top
+illum 4
+Kd 1.0 1.0 1.0
+Ka 1.0 1.0 1.0
+Ks 0.0 0.0 0.0
+map_Kd CanTop1.png
+
+newmtl Material_Bottom
+illum 4
+Kd 0.60 0.60 0.60
+Ka 0.60 0.60 0.60
+Ks 0.0 0.0 0.0
+d 1.000000 

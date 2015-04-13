@@ -9,18 +9,13 @@ public class Ad : MonoBehaviour {
 	public Text FreeCoinsText;
 	string oneHrMark = "1:00:00";
 	DateTime last;
-	Coins coin;
+	public TileMap tm;
 
 	void Start () {
-		coin = GetComponent<Coins> ();
 		Advertisement.Initialize ("131625271", false);
 		last = DateTime.Parse(PlayerPrefs.GetString ("LastTimePlayedAd"));
 
-		if (last == null) {
-			last = DateTime.UtcNow;	
-		}
-
-		if (DateTime.UtcNow - last >= TimeSpan.Parse(oneHrMark)){
+		if (DateTime.UtcNow - last >= TimeSpan.Parse(oneHrMark) && tm.thereIsConnection){
 			FreeCoinsButton.enabled = true;
 			FreeCoinsButton.image.enabled = true;
 			FreeCoinsText.enabled = true;

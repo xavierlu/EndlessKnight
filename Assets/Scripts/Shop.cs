@@ -3,7 +3,6 @@ using UnityEngine.UI;
 using System.Collections;
 
 public class Shop : MonoBehaviour {
-	int currentCoins = 0;
 	int gamePiece = 0;
 	public Canvas confirmCanvas;
 	public Text confirmText;
@@ -252,6 +251,20 @@ public class Shop : MonoBehaviour {
 		}
 	}
 
+	public void BuySodaCan(bool TorF){
+		if (PlayerPrefs.GetString("BroughtGamePiece").Contains("sodacan"))
+			PlayerPrefs.SetInt ("SelectedGamePiece",18);
+		else if (!TorF)
+			Confirm (100,18);
+		else {
+			if (PlayerPrefs.GetInt ("Coins") >= 100) {
+				PlayerPrefs.SetInt ("Coins", PlayerPrefs.GetInt("Coins")-100);
+				PlayerPrefs.SetInt ("SelectedGamePiece",18);
+				PlayerPrefs.SetString("BroughtGamePiece",PlayerPrefs.GetString("BroughtGamePiece")+"sodacan");
+			}
+		}
+	}
+
 	public void Confirm(int num, int gameP){
 		backButton.enabled = false;
 		backButton.image.enabled = false;
@@ -316,6 +329,9 @@ public class Shop : MonoBehaviour {
 				break;
 			case 17:
 				BuyBillBoard(true);
+				break;
+			case 18:
+				BuySodaCan(true);
 				break;
 			}		
 		}
