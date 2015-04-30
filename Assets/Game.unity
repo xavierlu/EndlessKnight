@@ -881,66 +881,6 @@ RectTransform:
   m_AnchoredPosition: {x: -70.1000595, y: -42}
   m_SizeDelta: {x: 17, y: 17}
   m_Pivot: {x: .5, y: .5}
---- !u!1 &162343117
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 162343120}
-  - 33: {fileID: 162343119}
-  - 23: {fileID: 162343118}
-  m_Layer: 0
-  m_Name: Plane
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!23 &162343118
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 162343117}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_Materials:
-  - {fileID: 0}
-  m_SubsetIndices: 
-  m_StaticBatchRoot: {fileID: 0}
-  m_UseLightProbes: 1
-  m_ReflectionProbeUsage: 1
-  m_ProbeAnchor: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_PreserveUVs: 0
-  m_ImportantGI: 0
-  m_AutoUVMaxDistance: .5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingOrder: 0
---- !u!33 &162343119
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 162343117}
-  m_Mesh: {fileID: 4300000, guid: b3ff400c96e0c434baa1820c56ace24d, type: 3}
---- !u!4 &162343120
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 162343117}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1572.06763, y: 697.231995, z: -617.325256}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 7
 --- !u!1 &171995529
 GameObject:
   m_ObjectHideFlags: 0
@@ -6231,7 +6171,7 @@ RectTransform:
   m_RootOrder: 0
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -211.5}
+  m_AnchoredPosition: {x: 0, y: -181.5}
   m_SizeDelta: {x: 0, y: 453}
   m_Pivot: {x: .5, y: .5}
 --- !u!222 &810584941
@@ -6734,7 +6674,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!108 &945930897
 Light:
@@ -7109,13 +7049,12 @@ GameObject:
   - 4: {fileID: 1029993966}
   - 114: {fileID: 1029993965}
   - 114: {fileID: 1029993963}
-  - 114: {fileID: 1029993964}
   m_Layer: 0
   m_Name: Srcipt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!114 &1029993963
 MonoBehaviour:
@@ -7131,17 +7070,6 @@ MonoBehaviour:
   confirmCanvas: {fileID: 1229565108}
   confirmText: {fileID: 2050973871}
   backButton: {fileID: 1700609340}
---- !u!114 &1029993964
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1029993962}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 286efed9a92a957419a493fdd53e39b7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1029993965
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9366,7 +9294,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &1486195988
 Transform:
@@ -9436,6 +9364,7 @@ MonoBehaviour:
   - {fileID: 179438, guid: e4dadd690f1dcc14e9b1cef4333154bc, type: 2}
   - {fileID: 163774, guid: 4298ecc4bb9623b4595fc8cab7d7c718, type: 2}
   currentScoreText: {fileID: 126461002}
+  coinText: {fileID: 1100080659}
   mapSizeX: 8
   mapSizeY: 8
   currGamePiece: 4
@@ -9445,7 +9374,7 @@ MonoBehaviour:
   CD: {fileID: 1486195992}
   GameO: {fileID: 336870805}
   smooth: 1
-  thereIsConnection: 0
+  isConnectedToInternet: 1
 --- !u!114 &1486195990
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11624,8 +11553,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 456169981}
   m_HandleRect: {fileID: 456169980}
   m_Direction: 2
-  m_Value: .966887414
-  m_Size: .336749643
+  m_Value: .900662243
+  m_Size: .336749673
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:

@@ -5,11 +5,11 @@ licenseType: Free
 AudioImporter:
   serializedVersion: 6
   defaultSettings:
-    loadType: 1
-    sampleRateSetting: 0
+    loadType: 2
+    sampleRateSetting: 1
     sampleRateOverride: 0
     compressionFormat: 1
-    quality: .98999995
+    quality: .799999952
     conversionMode: 0
   platformSettingOverrides: {}
   forceToMono: 0

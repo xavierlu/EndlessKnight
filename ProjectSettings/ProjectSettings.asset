@@ -7,7 +7,7 @@ PlayerSettings:
   AndroidProfiler: 0
   defaultScreenOrientation: 3
   targetDevice: 2
-  targetGlesGraphics: 1
+  targetGlesGraphics: -1
   targetIOSGraphics: -1
   targetResolution: 0
   accelerometerFrequency: 0
@@ -28,8 +28,8 @@ PlayerSettings:
   m_UseDX11: 0
   m_Stereoscopic3D: 0
   iosShowActivityIndicatorOnLoading: -1
-  androidShowActivityIndicatorOnLoading: -1
-  iosAppInBackgroundBehavior: 0
+  androidShowActivityIndicatorOnLoading: 2
+  iosAppInBackgroundBehavior: -1
   displayResolutionDialog: 1
   allowedAutorotateToPortrait: 1
   allowedAutorotateToPortraitUpsideDown: 1
@@ -50,7 +50,7 @@ PlayerSettings:
   forceSingleInstance: 0
   resizableWindow: 0
   useMacAppStoreValidation: 0
-  gpuSkinning: 1
+  gpuSkinning: 0
   xboxPIXTextureCapture: 0
   xboxEnableAvatar: 0
   xboxEnableKinect: 0
@@ -82,10 +82,10 @@ PlayerSettings:
   xboxOneDisableKinectGpuReservation: 0
   productGUID: 5c596556decb141888be121e4494e18f
   AndroidBundleVersionCode: 1
-  AndroidMinSdkVersion: 15
-  AndroidPreferredInstallLocation: 1
+  AndroidMinSdkVersion: 16
+  AndroidPreferredInstallLocation: 0
   aotOptions: 
-  apiCompatibilityLevel: 2
+  apiCompatibilityLevel: 1
   iPhoneStrippingLevel: 0
   iPhoneScriptCallOptimization: 0
   ForceInternetPermission: 0
@@ -95,7 +95,7 @@ PlayerSettings:
   preloadShaders: 0
   StripUnusedMeshComponents: 0
   iPhoneSdkVersion: 988
-  iPhoneTargetOSVersion: 22
+  iPhoneTargetOSVersion: 28
   uIPrerenderedIcon: 0
   uIRequiresPersistentWiFi: 0
   uIStatusBarHidden: 1
@@ -123,7 +123,7 @@ PlayerSettings:
   AndroidSplashScreenScale: 0
   AndroidKeystoreName: 
   AndroidKeyaliasName: 
-  AndroidTVCompatibility: 1
+  AndroidTVCompatibility: 0
   AndroidIsGame: 1
   androidEnableBanner: 1
   m_AndroidBanners:
@@ -141,6 +141,9 @@ PlayerSettings:
     m_StaticBatching: 1
     m_DynamicBatching: 1
   - m_BuildTarget: Android
+    m_StaticBatching: 1
+    m_DynamicBatching: 1
+  - m_BuildTarget: iPhone
     m_StaticBatching: 1
     m_DynamicBatching: 1
   webPlayerTemplate: APPLICATION:Default

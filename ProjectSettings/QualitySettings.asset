@@ -40,7 +40,7 @@ QualitySettings:
     shadowCascade2Split: .333333343
     shadowCascade4Split: {x: .0666666701, y: .200000003, z: .466666669}
     blendWeights: 2
-    textureQuality: 0
+    textureQuality: 1
     anisotropicTextures: 1
     antiAliasing: 0
     softParticles: 0
@@ -48,7 +48,7 @@ QualitySettings:
     realtimeReflectionProbes: 0
     billboardsFaceCameraPosition: 0
     vSyncCount: 0
-    lodBias: .600000024
+    lodBias: .5
     maximumLODLevel: 0
     particleRaycastBudget: 32
     excludedTargetPlatforms: []
@@ -78,9 +78,9 @@ QualitySettings:
   m_PerPlatformDefaultQuality:
     Android: 1
     BlackBerry: 1
-    Standalone: 2
+    Standalone: 1
     WP8: 1
-    Web: 2
+    Web: 1
     WebGL: 1
     Windows Store Apps: 1
     iPhone: 1
