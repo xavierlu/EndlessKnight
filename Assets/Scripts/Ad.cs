@@ -15,7 +15,7 @@ public class Ad : MonoBehaviour {
 		Advertisement.Initialize ("131625271", false);
 		last = DateTime.Parse(PlayerPrefs.GetString ("LastTimePlayedAd"));
 
-		if (DateTime.UtcNow - last >= TimeSpan.Parse(oneHrMark) && tm.thereIsConnection){
+		if (DateTime.UtcNow - last >= TimeSpan.Parse(oneHrMark) && tm.isConnectedToInternet){
 			FreeCoinsButton.enabled = true;
 			FreeCoinsButton.image.enabled = true;
 			FreeCoinsText.enabled = true;

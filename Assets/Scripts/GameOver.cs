@@ -1,5 +1,4 @@
 ﻿using UnityEngine;
-using UnityEngine.Advertisements;
 using UnityEngine.UI;
 
 public class GameOver : MonoBehaviour
@@ -13,14 +12,13 @@ public class GameOver : MonoBehaviour
 
 	void Start ()
 	{
-		Advertisement.Initialize ("131625271", false);
 		anim = GetComponent <Animator> ();
 	}
 
 	void Update ()
 	{
 		bool isStart = CD.isStarted();
-		if (!Advertisement.isShowing && isStart){
+		if (isStart){
 			if (time > 0) {
 				time -= Time.deltaTime;		
 			}

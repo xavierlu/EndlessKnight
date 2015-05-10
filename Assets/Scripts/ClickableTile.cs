@@ -12,7 +12,7 @@ public class ClickableTile : MonoBehaviour {
 			map.MoveSelectedUnitTo(tileX, tileY);
 	}
 
-	public void OnPointerUp(){
+	public void OnPointerClick(){
 		if (!myColor.Equals("red"))
 			map.MoveSelectedUnitTo(tileX, tileY);
 	}

@@ -1,12 +1,47 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Advertisements;
 using System.Collections;
+using System;
 
 public class Shop : MonoBehaviour {
 	int gamePiece = 0;
 	public Canvas confirmCanvas;
-	public Text confirmText;
+	public Text confirmText, coinText;
 	public Button backButton;
+	public Image[] gamePieceButton;
+	public Button FreeCoinsButton;
+	public Text FreeCoinsText;
+	string oneHrMark = "1:00:00";
+	DateTime last;
+	public TileMap tm;
+
+	void Start()
+	{
+		Advertisement.Initialize ("131625271", false);
+		last = DateTime.Parse(PlayerPrefs.GetString ("LastTimePlayedAd"));
+		if (DateTime.UtcNow - last >= TimeSpan.Parse(oneHrMark) && tm.isConnectedToInternet){
+			FreeCoinsButton.enabled = true;
+			FreeCoinsButton.image.enabled = true;
+			FreeCoinsText.enabled = true;
+		}
+		else{
+			FreeCoinsButton.enabled = false;
+			FreeCoinsButton.image.enabled = false;
+			FreeCoinsText.enabled = false;
+		}
+		coinText.text = "¢"+PlayerPrefs.GetInt("Coins");
+	}
+
+	public void PlayAd(){
+		DateTime now = DateTime.UtcNow;
+		PlayerPrefs.SetString ("LastTimePlayedAd",now.ToString());
+		Advertisement.Show ("rewardedVideoZone");
+		PlayerPrefs.SetInt ("Coins",PlayerPrefs.GetInt("Coins")+15);
+		FreeCoinsButton.enabled = false;
+		FreeCoinsButton.image.enabled = false;
+		FreeCoinsText.enabled = false;
+	}
 
 	public void BuyWhiteKnight(){
 		PlayerPrefs.SetInt ("SelectedGamePiece",0);
@@ -22,6 +57,7 @@ public class Shop : MonoBehaviour {
 				PlayerPrefs.SetInt ("Coins", PlayerPrefs.GetInt("Coins")-100);
 				PlayerPrefs.SetInt ("SelectedGamePiece",1);
 				PlayerPrefs.SetString("BroughtGamePiece",PlayerPrefs.GetString("BroughtGamePiece")+"cube");
+
 			}
 		}
 	}
@@ -128,10 +164,10 @@ public class Shop : MonoBehaviour {
 		if (PlayerPrefs.GetString("BroughtGamePiece").Contains("knuckle"))
 			PlayerPrefs.SetInt ("SelectedGamePiece",9);
 		else if (!TorF)
-			Confirm (200,9);
+			Confirm (100,9);
 		else {
-		if (PlayerPrefs.GetInt ("Coins") >= 200) {
-			PlayerPrefs.SetInt ("Coins", PlayerPrefs.GetInt("Coins")-200);
+		if (PlayerPrefs.GetInt ("Coins") >= 100) {
+			PlayerPrefs.SetInt ("Coins", PlayerPrefs.GetInt("Coins")-100);
 			PlayerPrefs.SetInt ("SelectedGamePiece",9);
 				PlayerPrefs.SetString("BroughtGamePiece",PlayerPrefs.GetString("BroughtGamePiece")+"knuckle");
 			}
@@ -203,7 +239,7 @@ public class Shop : MonoBehaviour {
 			if (PlayerPrefs.GetInt ("Coins") >= 225) {
 				PlayerPrefs.SetInt ("Coins", PlayerPrefs.GetInt ("Coins") - 225);
 				PlayerPrefs.SetInt ("SelectedGamePiece", 13);
-				PlayerPrefs.SetString("BroughtGamePiece",PlayerPrefs.GetString("BroughtGamePiece")+"printer");
+				PlayerPrefs.SetString("BroughtGamePiece",PlayerPrefs.GetString("BroughtGamePiece")+"chest");
 
 			}
 		}

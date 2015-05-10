@@ -4,6 +4,8 @@ using UnityEngine.Advertisements;
 using UnityEngine.Audio;
 using UnityEngine.Events;
 using System.Collections;
+using System.Net;
+
 public class TileMap : MonoBehaviour {
 	public GameObject[] selectedUnit;
 	public GameObject tiles;
@@ -15,6 +17,7 @@ public class TileMap : MonoBehaviour {
 	public AudioMixer MasterMixer;
 	public GameObject[] BackgroundSound;
 	public Text currentScoreText;
+	public Text coinText;
 	public int mapSizeX = 5;
 	public int mapSizeY = 5;
 	public int currGamePiece = 4;
@@ -24,7 +27,7 @@ public class TileMap : MonoBehaviour {
 	public CountDown CD;
 	public GameOver GameO;
 	public float smooth = 5.5f;
-	public bool thereIsConnection = false;
+	public bool isConnectedToInternet = true;
 	bool stillHasTime = true;
 	bool getGamePiece = false;
 	bool isHaveExtinguisher = false;
@@ -41,20 +44,21 @@ public class TileMap : MonoBehaviour {
 	GameObject playerGO;
 	GameObject TargetGO;
 	AudioSource source;
-	Coins myCoin;
 	bool flag = false,AdSetting = false;
 
+	void Awake(){
+		isConnectedToInternet = TestConnection ();
+	}
+
 	void Start() {
-		TestConnection ();
+		coinText.text = "¢"+PlayerPrefs.GetInt("Coins");
 		if (PlayerPrefs.GetInt("AdCount") != 9 && !Advertisement.isShowing)
 			PlayerPrefs.SetInt("AdCount",PlayerPrefs.GetInt("AdCount")+1);
 		MasterMixer.SetFloat ("sfxVol", 0.0f);
 		MasterMixer.SetFloat ("musicVol", -10.0f);
 		GenerateMapVisual();
 		InstantiateTargetTile ();
-		myCoin = (Coins)coinsManager.GetComponent<Coins> ();
 		Advertisement.Initialize ("131625271", false);
-		Debug.LogError (PlayerPrefs.GetInt("AdCount"));
 		if (!getGamePiece) {
 			currGamePiece = PlayerPrefs.GetInt("SelectedGamePiece");
 			Advantage();
@@ -74,7 +78,7 @@ public class TileMap : MonoBehaviour {
 		if (PlayerPrefs.GetInt("AdCount") == 9 && !flag) {
 			PlayerPrefs.SetInt("AdCount",1);
 			flag = true;
-			if(!AdSetting && thereIsConnection)
+			if(!AdSetting && isConnectedToInternet)
 				Advertisement.Show ("rewardedVideoZone");
 		}
 	}
@@ -252,7 +256,7 @@ public class TileMap : MonoBehaviour {
 				if (TargetX == playerCurrPositionX && TargetY == playerCurrPositionY) {
 					if (currGamePiece == 15)
 						AddCoin = Random.Range(-3,6);
-					myCoin.AddCoins(AddCoin);
+					PlayerPrefs.SetInt("Coins",PlayerPrefs.GetInt("Coins")+AddCoin);
 					source.PlayOneShot(coinSound[coinSoundSelection]);
 					if(!isHaveExtinguisher)
 						SetObstacle();
@@ -264,19 +268,14 @@ public class TileMap : MonoBehaviour {
 						breakRecordAnim.SetTrigger("Break");
 						PlayerPrefs.SetInt("HighScore", currentScore);
 					}
+					coinText.text = "¢"+PlayerPrefs.GetInt("Coins");
 				}
 			}
 		}
 	}
 
-	public float GetSlope(int x1, int y1, int x2, int y2){
-		float x11 = (float)(x1);
-		float y11 = (float)(y1);
-		float x22 = (float)(x2);
-		float y22 = (float)(y2);
-
-		float slope = (float)((y22-y11)/(x22-x11)) ;
-		return slope;
+	public float GetSlope(float x1, float y1, float x2, float y2){
+		return (y2 - y1) / (x2 - x1);
 	}
 		
 	public void FBShare(){
@@ -313,26 +312,20 @@ public class TileMap : MonoBehaviour {
 		                    "&amp;lang=" + WWW.EscapeURL(lang));
 	}
 
-	IEnumerator TestConnection()
+
+	public static bool TestConnection()
 	{
-		float timeTaken = 0.0f;
-		float maxTime = 2.0f;
-		while ( true )
+		try
 		{
-			Ping testPing = new Ping( "74.125.79.99" );
-			timeTaken = 0.0f;
-			while ( !testPing.isDone )
-			{	
-				timeTaken += Time.deltaTime;		
-				if ( timeTaken > maxTime )
-				{
-					thereIsConnection = false;
-					break;
-				}
-				yield return null;
+			using (WebClient client = new WebClient())
+				using (var stream = client.OpenRead("http://www.google.com"))
+			{
+				return true;
 			}
-			if ( timeTaken <= maxTime ) thereIsConnection = true;
-			yield return null;
+		}
+		catch
+		{
+			return false;
 		}
 	}
 }
