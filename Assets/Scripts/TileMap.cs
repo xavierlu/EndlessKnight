@@ -51,7 +51,7 @@ public class TileMap : MonoBehaviour {
 	}
 
 	void Start() {
-		coinText.text = "¢"+PlayerPrefs.GetInt("Coins");
+		coinText.text = PlayerPrefs.GetInt("Coins").ToString();
 		if (PlayerPrefs.GetInt("AdCount") != 9 && !Advertisement.isShowing)
 			PlayerPrefs.SetInt("AdCount",PlayerPrefs.GetInt("AdCount")+1);
 		MasterMixer.SetFloat ("sfxVol", 0.0f);

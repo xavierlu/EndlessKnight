@@ -30,7 +30,7 @@ public class Shop : MonoBehaviour {
 			FreeCoinsButton.image.enabled = false;
 			FreeCoinsText.enabled = false;
 		}
-		coinText.text = "¢"+PlayerPrefs.GetInt("Coins");
+		coinText.text = ""+PlayerPrefs.GetInt("Coins");
 	}
 
 	public void PlayAd(){
