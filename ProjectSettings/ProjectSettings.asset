@@ -92,7 +92,7 @@ PlayerSettings:
   ForceInternetPermission: 0
   ForceSDCardPermission: 0
   CreateWallpaper: 0
-  APKExpansionFiles: 0
+  APKExpansionFiles: 1
   preloadShaders: 0
   StripUnusedMeshComponents: 0
   iPhoneSdkVersion: 988
@@ -123,8 +123,8 @@ PlayerSettings:
   iOSLaunchScreenCustomXibPath: 
   AndroidTargetDevice: 0
   AndroidSplashScreenScale: 0
-  AndroidKeystoreName: 
-  AndroidKeyaliasName: 
+  AndroidKeystoreName: C:/Users/Xavier/Desktop/Xavier Lu/_Unity/EndlessKnight/KeyStore/user.keystore
+  AndroidKeyaliasName: final
   AndroidTVCompatibility: 0
   AndroidIsGame: 1
   androidEnableBanner: 0

@@ -51,7 +51,7 @@ public class TileMap : MonoBehaviour {
 	}
 
 	void Start() {
-		coinText.text = PlayerPrefs.GetInt("Coins").ToString();
+		coinText.text = PlayerPrefs.GetInt("Coins")+"";
 		if (PlayerPrefs.GetInt("AdCount") != 9 && !Advertisement.isShowing)
 			PlayerPrefs.SetInt("AdCount",PlayerPrefs.GetInt("AdCount")+1);
 		MasterMixer.SetFloat ("sfxVol", 0.0f);
@@ -196,7 +196,7 @@ public class TileMap : MonoBehaviour {
 	}
 
 	void InstantiatePlayer(){
-		int x;int y;
+		int x,y;
 		do{
 			x = Random.Range (1, mapSizeX+1);
 			y = Random.Range (1, mapSizeY+1);
@@ -220,7 +220,7 @@ public class TileMap : MonoBehaviour {
 					InitClickableTile(x,y,"black");
 				}
 				else{
-				    go[x,y] = (GameObject)Instantiate( tiles, new Vector3(x, 0, y), Quaternion.identity );
+					go[x,y] = (GameObject)Instantiate( tiles, new Vector3(x, 0, y), Quaternion.identity );
 					go[x,y].GetComponent<Renderer>().material.color = Color.white;
 					InitClickableTile(x,y,"white");
 				}
@@ -240,10 +240,6 @@ public class TileMap : MonoBehaviour {
 		ClickableTile ct = go[x,y].GetComponent<ClickableTile>();
 		ct.myColor = color;
 	}
-	
-	public Vector3 TileCoordToWorldCoord(int x, int y) {
-		return new Vector3(x, 0, y);
-	}
 
 	public void MoveSelectedUnitTo(int x, int y) {
 		if (stillHasTime && CD.isStarted() && Time.timeScale == 1){
@@ -252,13 +248,15 @@ public class TileMap : MonoBehaviour {
 			    		&& Vector3.Distance(new Vector3(playerCurrPositionX,0,playerCurrPositionY),new Vector3(x,0,y)) == Mathf.Sqrt(5.0f)) {
 				playerCurrPositionX = x;
 				playerCurrPositionY = y;
-				playerGO.transform.position = TileCoordToWorldCoord(x,y);	
+				playerGO.transform.position = new Vector3(x, 0, y);	
 				if (TargetX == playerCurrPositionX && TargetY == playerCurrPositionY) {
 					if (currGamePiece == 15)
 						AddCoin = Random.Range(-3,6);
 					PlayerPrefs.SetInt("Coins",PlayerPrefs.GetInt("Coins")+AddCoin);
 					source.PlayOneShot(coinSound[coinSoundSelection]);
-					if(!isHaveExtinguisher)
+					if(isHaveExtinguisher && Random.Range(1,3)==1)
+						SetObstacle();
+					else
 						SetObstacle();
 					LerpTargetGO();
 					GameO.SetTime((float)TimeToRestart+0.9f);
