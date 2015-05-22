@@ -266,7 +266,7 @@ public class TileMap : MonoBehaviour {
 						breakRecordAnim.SetTrigger("Break");
 						PlayerPrefs.SetInt("HighScore", currentScore);
 					}
-					coinText.text = "¢"+PlayerPrefs.GetInt("Coins");
+					coinText.text = ""+PlayerPrefs.GetInt("Coins");
 				}
 			}
 		}

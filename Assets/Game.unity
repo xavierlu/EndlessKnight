@@ -6172,7 +6172,7 @@ RectTransform:
   m_RootOrder: 0
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -221.5}
+  m_AnchoredPosition: {x: 0, y: -226.5}
   m_SizeDelta: {x: 0, y: 453}
   m_Pivot: {x: .5, y: .5}
 --- !u!222 &810584941
@@ -7152,7 +7152,6 @@ GameObject:
   - 20: {fileID: 1049479266}
   - 92: {fileID: 1049479265}
   - 124: {fileID: 1049479264}
-  - 114: {fileID: 1049479263}
   m_Layer: 0
   m_Name: MainCamera
   m_TagString: MainCamera
@@ -7160,17 +7159,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1049479263
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1049479262}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5e7f7761cf7666445a06dff449d9442a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!124 &1049479264
 Behaviour:
   m_ObjectHideFlags: 0
@@ -9335,7 +9323,6 @@ GameObject:
   - 4: {fileID: 1486195988}
   - 114: {fileID: 1486195989}
   - 114: {fileID: 1486195990}
-  - 114: {fileID: 1486195991}
   - 114: {fileID: 1486195992}
   - 114: {fileID: 1486195993}
   m_Layer: 0
@@ -9445,17 +9432,6 @@ MonoBehaviour:
   ClickMe: {fileID: 0}
   paused: {fileID: 24592648, guid: f3fcee155dc9d3b4197bb84300a4de54, type: 2}
   unpaused: {fileID: 24500003, guid: f3fcee155dc9d3b4197bb84300a4de54, type: 2}
---- !u!114 &1486195991
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1486195987}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ca8347b5b255daf4cb6d5afada04d23e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1486195992
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11677,8 +11653,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 456169981}
   m_HandleRect: {fileID: 456169980}
   m_Direction: 2
-  m_Value: .988962471
-  m_Size: .336749673
+  m_Value: .999999881
+  m_Size: .336749613
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
