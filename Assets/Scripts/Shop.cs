@@ -51,7 +51,7 @@ public class Shop : MonoBehaviour {
 		if (PlayerPrefs.GetString("BroughtGamePiece").Contains("cube"))
 			PlayerPrefs.SetInt ("SelectedGamePiece",1);
 		else if (!TorF)
-			Confirm (100,1);
+			Confirm (100,1); 
 		else {
 			if (PlayerPrefs.GetInt ("Coins") >= 100) {
 				PlayerPrefs.SetInt ("Coins", PlayerPrefs.GetInt("Coins")-100);
@@ -374,21 +374,7 @@ public class Shop : MonoBehaviour {
 		backButton.enabled = true;
 		backButton.image.enabled = true;
 		confirmCanvas.enabled = false;
-	}
-	//SelectedGamePiece
-	/**
-	 * 0 = white knight
-	 * 1 = hollow cube
-	 * 2 = plant
-	 * 3 = book
-	 * 4 = postbox
-	 * 5 = guitar
-	 * 6 = gas bottle
-	 * 7 = toilet
-	 * 8 = Vending machine
-	 * 9 = knuckle
-	 * 10 = wrench
-	 * */
+	} 
 
 	void OnDestroy(){
 		PlayerPrefs.SetInt ("Coins", PlayerPrefs.GetInt ("Coins"));
