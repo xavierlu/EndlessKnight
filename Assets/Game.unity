@@ -190,15 +190,15 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22461378, guid: 81445ab16dc20084085afed553321ce1, type: 2}
       propertyPath: m_RootOrder
-      value: 17
+      value: 19
       objectReference: {fileID: 0}
     - target: {fileID: 22461378, guid: 81445ab16dc20084085afed553321ce1, type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 1054.00024
+      value: 1171
       objectReference: {fileID: 0}
     - target: {fileID: 22461378, guid: 81445ab16dc20084085afed553321ce1, type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -6.00001526
+      value: -6
       objectReference: {fileID: 0}
     - target: {fileID: 22461378, guid: 81445ab16dc20084085afed553321ce1, type: 2}
       propertyPath: m_SizeDelta.x
@@ -323,8 +323,7 @@ MonoBehaviour:
           m_Mode: 6
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine, Version=0.0.0.0,
-              Culture=neutral, PublicKeyToken=null
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
             m_StringArgument: 
@@ -349,12 +348,11 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!114 &60132296 stripped
-MonoBehaviour:
-  m_PrefabParentObject: {fileID: 11461382, guid: 81445ab16dc20084085afed553321ce1,
+--- !u!224 &70122892 stripped
+RectTransform:
+  m_PrefabParentObject: {fileID: 22461378, guid: 81445ab16dc20084085afed553321ce1,
     type: 2}
-  m_PrefabInternal: {fileID: 60132289}
-  m_Script: {fileID: -765806418, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_PrefabInternal: {fileID: 486203141}
 --- !u!1 &76845653
 GameObject:
   m_ObjectHideFlags: 0
@@ -413,8 +411,7 @@ MonoBehaviour:
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine, Version=0.0.0.0,
-              Culture=neutral, PublicKeyToken=null
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
             m_StringArgument: 
@@ -605,15 +602,15 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22461378, guid: 81445ab16dc20084085afed553321ce1, type: 2}
       propertyPath: m_RootOrder
-      value: 7
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 22461378, guid: 81445ab16dc20084085afed553321ce1, type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 61.999939
+      value: 179
       objectReference: {fileID: 0}
     - target: {fileID: 22461378, guid: 81445ab16dc20084085afed553321ce1, type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -6.00001526
+      value: -6
       objectReference: {fileID: 0}
     - target: {fileID: 22461378, guid: 81445ab16dc20084085afed553321ce1, type: 2}
       propertyPath: m_SizeDelta.x
@@ -734,8 +731,7 @@ MonoBehaviour:
           m_Mode: 6
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine, Version=0.0.0.0,
-              Culture=neutral, PublicKeyToken=null
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
             m_StringArgument: 
@@ -760,12 +756,6 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!114 &91291062 stripped
-MonoBehaviour:
-  m_PrefabParentObject: {fileID: 11461382, guid: 81445ab16dc20084085afed553321ce1,
-    type: 2}
-  m_PrefabInternal: {fileID: 91291055}
-  m_Script: {fileID: -765806418, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
 --- !u!1 &126461000
 GameObject:
   m_ObjectHideFlags: 0
@@ -1120,8 +1110,7 @@ MonoBehaviour:
           m_Mode: 6
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine, Version=0.0.0.0,
-              Culture=neutral, PublicKeyToken=null
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
             m_StringArgument: 
@@ -1146,12 +1135,6 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!114 &192500363 stripped
-MonoBehaviour:
-  m_PrefabParentObject: {fileID: 11461382, guid: 81445ab16dc20084085afed553321ce1,
-    type: 2}
-  m_PrefabInternal: {fileID: 192500356}
-  m_Script: {fileID: -765806418, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
 --- !u!1 &196463618
 GameObject:
   m_ObjectHideFlags: 0
@@ -1298,8 +1281,7 @@ MonoBehaviour:
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine, Version=0.0.0.0,
-            Culture=neutral, PublicKeyToken=null
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -1585,15 +1567,15 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22461378, guid: 81445ab16dc20084085afed553321ce1, type: 2}
       propertyPath: m_RootOrder
-      value: 16
+      value: 18
       objectReference: {fileID: 0}
     - target: {fileID: 22461378, guid: 81445ab16dc20084085afed553321ce1, type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 926.999939
+      value: 1044
       objectReference: {fileID: 0}
     - target: {fileID: 22461378, guid: 81445ab16dc20084085afed553321ce1, type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -6.00001526
+      value: -6
       objectReference: {fileID: 0}
     - target: {fileID: 22461378, guid: 81445ab16dc20084085afed553321ce1, type: 2}
       propertyPath: m_SizeDelta.x
@@ -1718,8 +1700,7 @@ MonoBehaviour:
           m_Mode: 6
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine, Version=0.0.0.0,
-              Culture=neutral, PublicKeyToken=null
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
             m_StringArgument: 
@@ -1744,12 +1725,6 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!114 &257801670 stripped
-MonoBehaviour:
-  m_PrefabParentObject: {fileID: 11461382, guid: 81445ab16dc20084085afed553321ce1,
-    type: 2}
-  m_PrefabInternal: {fileID: 257801663}
-  m_Script: {fileID: -765806418, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
 --- !u!1001 &257943820
 Prefab:
   m_ObjectHideFlags: 0
@@ -1787,15 +1762,15 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22461378, guid: 81445ab16dc20084085afed553321ce1, type: 2}
       propertyPath: m_RootOrder
-      value: 8
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 22461378, guid: 81445ab16dc20084085afed553321ce1, type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 188.000061
+      value: 305
       objectReference: {fileID: 0}
     - target: {fileID: 22461378, guid: 81445ab16dc20084085afed553321ce1, type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -6.00001526
+      value: -6
       objectReference: {fileID: 0}
     - target: {fileID: 22461378, guid: 81445ab16dc20084085afed553321ce1, type: 2}
       propertyPath: m_SizeDelta.x
@@ -1916,8 +1891,7 @@ MonoBehaviour:
           m_Mode: 6
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine, Version=0.0.0.0,
-              Culture=neutral, PublicKeyToken=null
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
             m_StringArgument: 
@@ -1942,12 +1916,6 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!114 &257943827 stripped
-MonoBehaviour:
-  m_PrefabParentObject: {fileID: 11461382, guid: 81445ab16dc20084085afed553321ce1,
-    type: 2}
-  m_PrefabInternal: {fileID: 257943820}
-  m_Script: {fileID: -765806418, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
 --- !u!1 &265195400
 GameObject:
   m_ObjectHideFlags: 0
@@ -2356,8 +2324,7 @@ MonoBehaviour:
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine, Version=0.0.0.0,
-              Culture=neutral, PublicKeyToken=null
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
             m_StringArgument: 
@@ -2579,8 +2546,7 @@ MonoBehaviour:
           m_Mode: 6
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine, Version=0.0.0.0,
-              Culture=neutral, PublicKeyToken=null
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
             m_StringArgument: 
@@ -2900,8 +2866,7 @@ MonoBehaviour:
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine, Version=0.0.0.0,
-            Culture=neutral, PublicKeyToken=null
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -3146,6 +3111,90 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 443207926}
+--- !u!1 &451782664
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 224: {fileID: 451782665}
+  - 222: {fileID: 451782668}
+  - 114: {fileID: 451782667}
+  - 95: {fileID: 451782666}
+  m_Layer: 5
+  m_Name: equipped Text
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &451782665
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 451782664}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2051635949}
+  m_RootOrder: 5
+  m_AnchorMin: {x: .5, y: .5}
+  m_AnchorMax: {x: .5, y: .5}
+  m_AnchoredPosition: {x: -4.05309993e-06, y: 169}
+  m_SizeDelta: {x: 196, y: 68}
+  m_Pivot: {x: .5, y: .5}
+--- !u!95 &451782666
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 451782664}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 846d96f56cc8c73489975c892d2aeb9a, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &451782667
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 451782664}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: .196078435, g: .196078435, b: .196078435, a: 0}
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: b7e30c02234529e4bba3a096614e5ee1, type: 3}
+    m_FontSize: 50
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 10
+    m_MaxSize: 40
+    m_Alignment: 4
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: Equipped
+--- !u!222 &451782668
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 451782664}
 --- !u!1 &456169979
 GameObject:
   m_ObjectHideFlags: 0
@@ -3240,6 +3289,142 @@ RectTransform:
   m_AnchoredPosition: {x: -5, y: 0}
   m_SizeDelta: {x: -20, y: 0}
   m_Pivot: {x: .5, y: .5}
+--- !u!1001 &486203141
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1391758315}
+    m_Modifications:
+    - target: {fileID: 22461378, guid: 81445ab16dc20084085afed553321ce1, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22461378, guid: 81445ab16dc20084085afed553321ce1, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22461378, guid: 81445ab16dc20084085afed553321ce1, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22461378, guid: 81445ab16dc20084085afed553321ce1, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22461378, guid: 81445ab16dc20084085afed553321ce1, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22461378, guid: 81445ab16dc20084085afed553321ce1, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22461378, guid: 81445ab16dc20084085afed553321ce1, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 22461378, guid: 81445ab16dc20084085afed553321ce1, type: 2}
+      propertyPath: m_RootOrder
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 22461378, guid: 81445ab16dc20084085afed553321ce1, type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: -173
+      objectReference: {fileID: 0}
+    - target: {fileID: 22461378, guid: 81445ab16dc20084085afed553321ce1, type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: -6
+      objectReference: {fileID: 0}
+    - target: {fileID: 22461378, guid: 81445ab16dc20084085afed553321ce1, type: 2}
+      propertyPath: m_SizeDelta.x
+      value: -2301
+      objectReference: {fileID: 0}
+    - target: {fileID: 22461378, guid: 81445ab16dc20084085afed553321ce1, type: 2}
+      propertyPath: m_SizeDelta.y
+      value: 72
+      objectReference: {fileID: 0}
+    - target: {fileID: 22461378, guid: 81445ab16dc20084085afed553321ce1, type: 2}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22461378, guid: 81445ab16dc20084085afed553321ce1, type: 2}
+      propertyPath: m_AnchorMin.y
+      value: .5
+      objectReference: {fileID: 0}
+    - target: {fileID: 22461378, guid: 81445ab16dc20084085afed553321ce1, type: 2}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 22461378, guid: 81445ab16dc20084085afed553321ce1, type: 2}
+      propertyPath: m_AnchorMax.y
+      value: .5
+      objectReference: {fileID: 0}
+    - target: {fileID: 22461378, guid: 81445ab16dc20084085afed553321ce1, type: 2}
+      propertyPath: m_Pivot.x
+      value: .5
+      objectReference: {fileID: 0}
+    - target: {fileID: 22461378, guid: 81445ab16dc20084085afed553321ce1, type: 2}
+      propertyPath: m_Pivot.y
+      value: .5
+      objectReference: {fileID: 0}
+    - target: {fileID: 161378, guid: 81445ab16dc20084085afed553321ce1, type: 2}
+      propertyPath: m_Name
+      value: Creeper
+      objectReference: {fileID: 0}
+    - target: {fileID: 11461378, guid: 81445ab16dc20084085afed553321ce1, type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: e16afc83fa8534f49a49d1250b675440,
+        type: 3}
+    - target: {fileID: 11461384, guid: 81445ab16dc20084085afed553321ce1, type: 2}
+      propertyPath: m_Text
+      value: 100 coins
+      objectReference: {fileID: 0}
+    - target: {fileID: 22461378, guid: 81445ab16dc20084085afed553321ce1, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 22461378, guid: 81445ab16dc20084085afed553321ce1, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 22461378, guid: 81445ab16dc20084085afed553321ce1, type: 2}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11461382, guid: 81445ab16dc20084085afed553321ce1, type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 11461382, guid: 81445ab16dc20084085afed553321ce1, type: 2}
+      propertyPath: m_Color.r
+      value: .882352948
+      objectReference: {fileID: 0}
+    - target: {fileID: 11461382, guid: 81445ab16dc20084085afed553321ce1, type: 2}
+      propertyPath: m_Color.g
+      value: .74847877
+      objectReference: {fileID: 0}
+    - target: {fileID: 11461382, guid: 81445ab16dc20084085afed553321ce1, type: 2}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11461382, guid: 81445ab16dc20084085afed553321ce1, type: 2}
+      propertyPath: m_Color.a
+      value: .75686276
+      objectReference: {fileID: 0}
+    - target: {fileID: 11461380, guid: 81445ab16dc20084085afed553321ce1, type: 2}
+      propertyPath: m_Transition
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 11461384, guid: 81445ab16dc20084085afed553321ce1, type: 2}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: b7e30c02234529e4bba3a096614e5ee1,
+        type: 3}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 81445ab16dc20084085afed553321ce1, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1001 &497213672
 Prefab:
   m_ObjectHideFlags: 0
@@ -3277,7 +3462,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22461378, guid: 81445ab16dc20084085afed553321ce1, type: 2}
       propertyPath: m_RootOrder
-      value: 11
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 22461378, guid: 81445ab16dc20084085afed553321ce1, type: 2}
       propertyPath: m_AnchoredPosition.x
@@ -3285,7 +3470,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22461378, guid: 81445ab16dc20084085afed553321ce1, type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -6.00001717
+      value: -6
       objectReference: {fileID: 0}
     - target: {fileID: 22461378, guid: 81445ab16dc20084085afed553321ce1, type: 2}
       propertyPath: m_SizeDelta.x
@@ -3410,8 +3595,7 @@ MonoBehaviour:
           m_Mode: 6
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine, Version=0.0.0.0,
-              Culture=neutral, PublicKeyToken=null
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
             m_StringArgument: 
@@ -3436,12 +3620,6 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!114 &497213679 stripped
-MonoBehaviour:
-  m_PrefabParentObject: {fileID: 11461382, guid: 81445ab16dc20084085afed553321ce1,
-    type: 2}
-  m_PrefabInternal: {fileID: 497213672}
-  m_Script: {fileID: -765806418, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
 --- !u!1 &502481802
 GameObject:
   m_ObjectHideFlags: 0
@@ -3567,8 +3745,7 @@ MonoBehaviour:
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine, Version=0.0.0.0,
-              Culture=neutral, PublicKeyToken=null
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
             m_StringArgument: 
@@ -3759,15 +3936,15 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22461378, guid: 81445ab16dc20084085afed553321ce1, type: 2}
       propertyPath: m_RootOrder
-      value: 15
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 22461378, guid: 81445ab16dc20084085afed553321ce1, type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 800.999939
+      value: 918
       objectReference: {fileID: 0}
     - target: {fileID: 22461378, guid: 81445ab16dc20084085afed553321ce1, type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -6.00001526
+      value: -6
       objectReference: {fileID: 0}
     - target: {fileID: 22461378, guid: 81445ab16dc20084085afed553321ce1, type: 2}
       propertyPath: m_SizeDelta.x
@@ -3892,8 +4069,7 @@ MonoBehaviour:
           m_Mode: 6
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine, Version=0.0.0.0,
-              Culture=neutral, PublicKeyToken=null
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
             m_StringArgument: 
@@ -3918,12 +4094,6 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!114 &560096117 stripped
-MonoBehaviour:
-  m_PrefabParentObject: {fileID: 11461382, guid: 81445ab16dc20084085afed553321ce1,
-    type: 2}
-  m_PrefabInternal: {fileID: 560096110}
-  m_Script: {fileID: -765806418, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
 --- !u!1 &571571771
 GameObject:
   m_ObjectHideFlags: 0
@@ -4168,15 +4338,15 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22461378, guid: 81445ab16dc20084085afed553321ce1, type: 2}
       propertyPath: m_RootOrder
-      value: 14
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 22461378, guid: 81445ab16dc20084085afed553321ce1, type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 674.999939
+      value: 792
       objectReference: {fileID: 0}
     - target: {fileID: 22461378, guid: 81445ab16dc20084085afed553321ce1, type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -6.00001526
+      value: -6
       objectReference: {fileID: 0}
     - target: {fileID: 22461378, guid: 81445ab16dc20084085afed553321ce1, type: 2}
       propertyPath: m_SizeDelta.x
@@ -4301,8 +4471,7 @@ MonoBehaviour:
           m_Mode: 6
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine, Version=0.0.0.0,
-              Culture=neutral, PublicKeyToken=null
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
             m_StringArgument: 
@@ -4327,12 +4496,6 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!114 &621810477 stripped
-MonoBehaviour:
-  m_PrefabParentObject: {fileID: 11461382, guid: 81445ab16dc20084085afed553321ce1,
-    type: 2}
-  m_PrefabInternal: {fileID: 621810470}
-  m_Script: {fileID: -765806418, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
 --- !u!1 &645792545
 GameObject:
   m_ObjectHideFlags: 0
@@ -4452,8 +4615,7 @@ MonoBehaviour:
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine, Version=0.0.0.0,
-              Culture=neutral, PublicKeyToken=null
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
             m_StringArgument: 
@@ -4583,15 +4745,15 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22461378, guid: 81445ab16dc20084085afed553321ce1, type: 2}
       propertyPath: m_RootOrder
-      value: 4
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 22461378, guid: 81445ab16dc20084085afed553321ce1, type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: -56.9998169
+      value: 60
       objectReference: {fileID: 0}
     - target: {fileID: 22461378, guid: 81445ab16dc20084085afed553321ce1, type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -6.00001526
+      value: -6
       objectReference: {fileID: 0}
     - target: {fileID: 22461378, guid: 81445ab16dc20084085afed553321ce1, type: 2}
       propertyPath: m_SizeDelta.x
@@ -4712,8 +4874,7 @@ MonoBehaviour:
           m_Mode: 6
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine, Version=0.0.0.0,
-              Culture=neutral, PublicKeyToken=null
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
             m_StringArgument: 
@@ -4738,12 +4899,6 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!114 &672536841 stripped
-MonoBehaviour:
-  m_PrefabParentObject: {fileID: 11461382, guid: 81445ab16dc20084085afed553321ce1,
-    type: 2}
-  m_PrefabInternal: {fileID: 672536834}
-  m_Script: {fileID: -765806418, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
 --- !u!1 &676742717
 GameObject:
   m_ObjectHideFlags: 0
@@ -4926,7 +5081,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22461378, guid: 81445ab16dc20084085afed553321ce1, type: 2}
       propertyPath: m_RootOrder
-      value: 12
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 22461378, guid: 81445ab16dc20084085afed553321ce1, type: 2}
       propertyPath: m_AnchoredPosition.x
@@ -5055,8 +5210,7 @@ MonoBehaviour:
           m_Mode: 6
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine, Version=0.0.0.0,
-              Culture=neutral, PublicKeyToken=null
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
             m_StringArgument: 
@@ -5081,12 +5235,6 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!114 &703561459 stripped
-MonoBehaviour:
-  m_PrefabParentObject: {fileID: 11461382, guid: 81445ab16dc20084085afed553321ce1,
-    type: 2}
-  m_PrefabInternal: {fileID: 703561452}
-  m_Script: {fileID: -765806418, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
 --- !u!1001 &705233962
 Prefab:
   m_ObjectHideFlags: 0
@@ -5124,15 +5272,15 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22461378, guid: 81445ab16dc20084085afed553321ce1, type: 2}
       propertyPath: m_RootOrder
-      value: 3
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 22461378, guid: 81445ab16dc20084085afed553321ce1, type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: -175.999939
+      value: -59
       objectReference: {fileID: 0}
     - target: {fileID: 22461378, guid: 81445ab16dc20084085afed553321ce1, type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -6.00001526
+      value: -6
       objectReference: {fileID: 0}
     - target: {fileID: 22461378, guid: 81445ab16dc20084085afed553321ce1, type: 2}
       propertyPath: m_SizeDelta.x
@@ -5253,8 +5401,7 @@ MonoBehaviour:
           m_Mode: 6
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine, Version=0.0.0.0,
-              Culture=neutral, PublicKeyToken=null
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
             m_StringArgument: 
@@ -5279,12 +5426,6 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!114 &705233969 stripped
-MonoBehaviour:
-  m_PrefabParentObject: {fileID: 11461382, guid: 81445ab16dc20084085afed553321ce1,
-    type: 2}
-  m_PrefabInternal: {fileID: 705233962}
-  m_Script: {fileID: -765806418, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
 --- !u!1 &705451275
 GameObject:
   m_ObjectHideFlags: 0
@@ -5395,7 +5536,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22461378, guid: 81445ab16dc20084085afed553321ce1, type: 2}
       propertyPath: m_RootOrder
-      value: 6
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 22461378, guid: 81445ab16dc20084085afed553321ce1, type: 2}
       propertyPath: m_AnchoredPosition.x
@@ -5403,7 +5544,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22461378, guid: 81445ab16dc20084085afed553321ce1, type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -6.00001717
+      value: -6
       objectReference: {fileID: 0}
     - target: {fileID: 22461378, guid: 81445ab16dc20084085afed553321ce1, type: 2}
       propertyPath: m_SizeDelta.x
@@ -5524,8 +5665,7 @@ MonoBehaviour:
           m_Mode: 6
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine, Version=0.0.0.0,
-              Culture=neutral, PublicKeyToken=null
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
             m_StringArgument: 
@@ -5550,12 +5690,6 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!114 &716450462 stripped
-MonoBehaviour:
-  m_PrefabParentObject: {fileID: 11461382, guid: 81445ab16dc20084085afed553321ce1,
-    type: 2}
-  m_PrefabInternal: {fileID: 716450455}
-  m_Script: {fileID: -765806418, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
 --- !u!1 &766502299
 GameObject:
   m_ObjectHideFlags: 0
@@ -5783,8 +5917,7 @@ MonoBehaviour:
           m_Mode: 6
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine, Version=0.0.0.0,
-              Culture=neutral, PublicKeyToken=null
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
             m_StringArgument: 
@@ -5809,12 +5942,6 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!114 &785775093 stripped
-MonoBehaviour:
-  m_PrefabParentObject: {fileID: 11461382, guid: 81445ab16dc20084085afed553321ce1,
-    type: 2}
-  m_PrefabInternal: {fileID: 785775086}
-  m_Script: {fileID: -765806418, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
 --- !u!1 &802336709
 GameObject:
   m_ObjectHideFlags: 0
@@ -5873,8 +6000,7 @@ MonoBehaviour:
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine, Version=0.0.0.0,
-              Culture=neutral, PublicKeyToken=null
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
             m_StringArgument: 
@@ -6222,11 +6348,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22461378, guid: 81445ab16dc20084085afed553321ce1, type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 310.000061
+      value: 427
       objectReference: {fileID: 0}
     - target: {fileID: 22461378, guid: 81445ab16dc20084085afed553321ce1, type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -6.00001526
+      value: -6
       objectReference: {fileID: 0}
     - target: {fileID: 22461378, guid: 81445ab16dc20084085afed553321ce1, type: 2}
       propertyPath: m_SizeDelta.x
@@ -6347,8 +6473,7 @@ MonoBehaviour:
           m_Mode: 6
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine, Version=0.0.0.0,
-              Culture=neutral, PublicKeyToken=null
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
             m_StringArgument: 
@@ -6373,12 +6498,6 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!114 &856065902 stripped
-MonoBehaviour:
-  m_PrefabParentObject: {fileID: 11461382, guid: 81445ab16dc20084085afed553321ce1,
-    type: 2}
-  m_PrefabInternal: {fileID: 856065895}
-  m_Script: {fileID: -765806418, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
 --- !u!1 &860067009
 GameObject:
   m_ObjectHideFlags: 0
@@ -6631,8 +6750,7 @@ MonoBehaviour:
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine, Version=0.0.0.0,
-            Culture=neutral, PublicKeyToken=null
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -6704,7 +6822,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22461378, guid: 81445ab16dc20084085afed553321ce1, type: 2}
       propertyPath: m_RootOrder
-      value: 18
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 22461378, guid: 81445ab16dc20084085afed553321ce1, type: 2}
       propertyPath: m_AnchoredPosition.x
@@ -6712,7 +6830,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22461378, guid: 81445ab16dc20084085afed553321ce1, type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -6.00001526
+      value: -6
       objectReference: {fileID: 0}
     - target: {fileID: 22461378, guid: 81445ab16dc20084085afed553321ce1, type: 2}
       propertyPath: m_SizeDelta.x
@@ -6833,8 +6951,7 @@ MonoBehaviour:
           m_Mode: 6
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine, Version=0.0.0.0,
-              Culture=neutral, PublicKeyToken=null
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
             m_StringArgument: 
@@ -6859,12 +6976,6 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!114 &948806384 stripped
-MonoBehaviour:
-  m_PrefabParentObject: {fileID: 11461382, guid: 81445ab16dc20084085afed553321ce1,
-    type: 2}
-  m_PrefabInternal: {fileID: 948806377}
-  m_Script: {fileID: -765806418, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
 --- !u!1 &1016195018
 GameObject:
   m_ObjectHideFlags: 0
@@ -7002,12 +7113,13 @@ GameObject:
   - 4: {fileID: 1029993966}
   - 114: {fileID: 1029993965}
   - 114: {fileID: 1029993963}
+  - 114: {fileID: 1029993964}
   m_Layer: 0
   m_Name: Srcipt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!114 &1029993963
 MonoBehaviour:
@@ -7021,32 +7133,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   confirmCanvas: {fileID: 1229565108}
+  equippedAnim: {fileID: 451782666}
   confirmText: {fileID: 2050973871}
   coinText: {fileID: 2117624301}
-  backButton: {fileID: 1700609340}
-  gamePieceButton:
-  - {fileID: 0}
-  - {fileID: 192500363}
-  - {fileID: 785775093}
-  - {fileID: 497213679}
-  - {fileID: 703561459}
-  - {fileID: 716450462}
-  - {fileID: 1483836560}
-  - {fileID: 705233969}
-  - {fileID: 672536841}
-  - {fileID: 1561719907}
-  - {fileID: 257943827}
-  - {fileID: 856065902}
-  - {fileID: 1552837809}
-  - {fileID: 91291062}
-  - {fileID: 621810477}
-  - {fileID: 560096117}
-  - {fileID: 257801670}
-  - {fileID: 60132296}
-  - {fileID: 948806384}
   FreeCoinsButton: {fileID: 305575646}
   FreeCoinsText: {fileID: 1528465871}
   tm: {fileID: 1486195989}
+--- !u!114 &1029993964
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1029993962}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 58429980f9ddc4566a7551d0ef0032a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &1029993965
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7058,14 +7161,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b4c2bde8cf9564439f0fd03a4949257, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ShopCanvas: {fileID: 2051635952}
-  GameCanvas: {fileID: 806026471}
-  infoPage: {fileID: 2142457395}
-  pausePage: {fileID: 878804867}
-  helpPage: {fileID: 0}
-  helpImage: {fileID: 0}
-  arrowImage: {fileID: 0}
-  ClickMe: {fileID: 0}
   paused: {fileID: 24592648, guid: f3fcee155dc9d3b4197bb84300a4de54, type: 2}
   unpaused: {fileID: 24500003, guid: f3fcee155dc9d3b4197bb84300a4de54, type: 2}
 --- !u!4 &1029993966
@@ -7477,8 +7572,7 @@ MonoBehaviour:
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine, Version=0.0.0.0,
-              Culture=neutral, PublicKeyToken=null
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
             m_StringArgument: 
@@ -7662,8 +7756,7 @@ MonoBehaviour:
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine, Version=0.0.0.0,
-              Culture=neutral, PublicKeyToken=null
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
             m_StringArgument: 
@@ -7756,6 +7849,56 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1127970118}
+--- !u!1 &1146481385 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 161380, guid: 81445ab16dc20084085afed553321ce1, type: 2}
+  m_PrefabInternal: {fileID: 486203141}
+--- !u!114 &1146481387
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1146481385}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1862395651, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  delegates:
+  - eventID: 3
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1029993963}
+          m_MethodName: BuyCreeper
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+--- !u!95 &1146481388
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1146481385}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: bab47e658c3eb8145a730fdc99d18813, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!1 &1177629171
 GameObject:
   m_ObjectHideFlags: 0
@@ -7876,8 +8019,7 @@ MonoBehaviour:
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine, Version=0.0.0.0,
-              Culture=neutral, PublicKeyToken=null
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
             m_StringArgument: 
@@ -8196,8 +8338,7 @@ MonoBehaviour:
           m_Mode: 6
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine, Version=0.0.0.0,
-              Culture=neutral, PublicKeyToken=null
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
             m_StringArgument: 
@@ -8525,22 +8666,23 @@ RectTransform:
   - {fileID: 1764473436}
   - {fileID: 192500357}
   - {fileID: 785775087}
-  - {fileID: 705233963}
-  - {fileID: 672536835}
-  - {fileID: 1483836554}
-  - {fileID: 716450456}
-  - {fileID: 91291056}
-  - {fileID: 257943821}
-  - {fileID: 1561719901}
-  - {fileID: 1552837803}
   - {fileID: 497213673}
   - {fileID: 703561453}
+  - {fileID: 716450456}
+  - {fileID: 1483836554}
+  - {fileID: 948806378}
+  - {fileID: 70122892}
+  - {fileID: 705233963}
+  - {fileID: 672536835}
+  - {fileID: 91291056}
+  - {fileID: 257943821}
   - {fileID: 856065896}
+  - {fileID: 1552837803}
+  - {fileID: 1561719901}
   - {fileID: 621810471}
   - {fileID: 560096111}
   - {fileID: 257801664}
   - {fileID: 60132290}
-  - {fileID: 948806378}
   m_Father: {fileID: 254742131}
   m_RootOrder: 0
   m_AnchorMin: {x: 0, y: 0}
@@ -8718,8 +8860,7 @@ MonoBehaviour:
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine, Version=0.0.0.0,
-              Culture=neutral, PublicKeyToken=null
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
             m_StringArgument: 
@@ -9152,7 +9293,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22461378, guid: 81445ab16dc20084085afed553321ce1, type: 2}
       propertyPath: m_RootOrder
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 22461378, guid: 81445ab16dc20084085afed553321ce1, type: 2}
       propertyPath: m_AnchoredPosition.x
@@ -9160,7 +9301,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22461378, guid: 81445ab16dc20084085afed553321ce1, type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -6.00001717
+      value: -6
       objectReference: {fileID: 0}
     - target: {fileID: 22461378, guid: 81445ab16dc20084085afed553321ce1, type: 2}
       propertyPath: m_SizeDelta.x
@@ -9281,8 +9422,7 @@ MonoBehaviour:
           m_Mode: 6
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine, Version=0.0.0.0,
-              Culture=neutral, PublicKeyToken=null
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
             m_StringArgument: 
@@ -9307,12 +9447,6 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!114 &1483836560 stripped
-MonoBehaviour:
-  m_PrefabParentObject: {fileID: 11461382, guid: 81445ab16dc20084085afed553321ce1,
-    type: 2}
-  m_PrefabInternal: {fileID: 1483836553}
-  m_Script: {fileID: -765806418, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
 --- !u!1 &1486195987
 GameObject:
   m_ObjectHideFlags: 0
@@ -9375,6 +9509,7 @@ MonoBehaviour:
   - {fileID: 131582, guid: dabeb203f1807ff488dc840bdcf40dee, type: 2}
   - {fileID: 112650, guid: 0f39bbd69327af9409bdcb9ec336d99b, type: 2}
   - {fileID: 149158, guid: 2e844be50ea6d46429f99a17790fa611, type: 2}
+  - {fileID: 185180, guid: e6a02f9386cab0f4ab291893888b4276, type: 2}
   tiles: {fileID: 130280, guid: da498279432b2a4419be2c8d1b7f28d0, type: 2}
   Target: {fileID: 128898, guid: 0f4f3ae8995047e47845ff041ce9ee22, type: 2}
   coinsManager: {fileID: 1100080657}
@@ -9422,14 +9557,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b4c2bde8cf9564439f0fd03a4949257, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ShopCanvas: {fileID: 2051635952}
-  GameCanvas: {fileID: 806026471}
-  infoPage: {fileID: 2142457395}
-  pausePage: {fileID: 878804867}
-  helpPage: {fileID: 2102872638}
-  helpImage: {fileID: 0}
-  arrowImage: {fileID: 0}
-  ClickMe: {fileID: 0}
   paused: {fileID: 24592648, guid: f3fcee155dc9d3b4197bb84300a4de54, type: 2}
   unpaused: {fileID: 24500003, guid: f3fcee155dc9d3b4197bb84300a4de54, type: 2}
 --- !u!114 &1486195992
@@ -9593,15 +9720,15 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22461378, guid: 81445ab16dc20084085afed553321ce1, type: 2}
       propertyPath: m_RootOrder
-      value: 10
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 22461378, guid: 81445ab16dc20084085afed553321ce1, type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 432.999939
+      value: 550
       objectReference: {fileID: 0}
     - target: {fileID: 22461378, guid: 81445ab16dc20084085afed553321ce1, type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -6.00001526
+      value: -6
       objectReference: {fileID: 0}
     - target: {fileID: 22461378, guid: 81445ab16dc20084085afed553321ce1, type: 2}
       propertyPath: m_SizeDelta.x
@@ -9726,8 +9853,7 @@ MonoBehaviour:
           m_Mode: 6
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine, Version=0.0.0.0,
-              Culture=neutral, PublicKeyToken=null
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
             m_StringArgument: 
@@ -9752,12 +9878,6 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!114 &1552837809 stripped
-MonoBehaviour:
-  m_PrefabParentObject: {fileID: 11461382, guid: 81445ab16dc20084085afed553321ce1,
-    type: 2}
-  m_PrefabInternal: {fileID: 1552837802}
-  m_Script: {fileID: -765806418, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
 --- !u!1001 &1561719900
 Prefab:
   m_ObjectHideFlags: 0
@@ -9795,15 +9915,15 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22461378, guid: 81445ab16dc20084085afed553321ce1, type: 2}
       propertyPath: m_RootOrder
-      value: 9
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 22461378, guid: 81445ab16dc20084085afed553321ce1, type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 551.999939
+      value: 669
       objectReference: {fileID: 0}
     - target: {fileID: 22461378, guid: 81445ab16dc20084085afed553321ce1, type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -6.00001526
+      value: -6
       objectReference: {fileID: 0}
     - target: {fileID: 22461378, guid: 81445ab16dc20084085afed553321ce1, type: 2}
       propertyPath: m_SizeDelta.x
@@ -9928,8 +10048,7 @@ MonoBehaviour:
           m_Mode: 6
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine, Version=0.0.0.0,
-              Culture=neutral, PublicKeyToken=null
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
             m_StringArgument: 
@@ -9954,12 +10073,6 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!114 &1561719907 stripped
-MonoBehaviour:
-  m_PrefabParentObject: {fileID: 11461382, guid: 81445ab16dc20084085afed553321ce1,
-    type: 2}
-  m_PrefabInternal: {fileID: 1561719900}
-  m_Script: {fileID: -765806418, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
 --- !u!1 &1606791953
 GameObject:
   m_ObjectHideFlags: 0
@@ -10123,7 +10236,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1700609337
 RectTransform:
   m_ObjectHideFlags: 0
@@ -10179,8 +10292,7 @@ MonoBehaviour:
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine, Version=0.0.0.0,
-              Culture=neutral, PublicKeyToken=null
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
             m_StringArgument: 
@@ -10362,7 +10474,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22461378, guid: 81445ab16dc20084085afed553321ce1, type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -6.00001717
+      value: -6
       objectReference: {fileID: 0}
     - target: {fileID: 22461378, guid: 81445ab16dc20084085afed553321ce1, type: 2}
       propertyPath: m_SizeDelta.x
@@ -10495,8 +10607,7 @@ MonoBehaviour:
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine, Version=0.0.0.0,
-              Culture=neutral, PublicKeyToken=null
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
             m_StringArgument: 
@@ -10587,6 +10698,157 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1785903893}
+--- !u!1 &1797553575
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 224: {fileID: 1797553576}
+  - 222: {fileID: 1797553581}
+  - 114: {fileID: 1797553580}
+  - 114: {fileID: 1797553579}
+  - 95: {fileID: 1797553578}
+  - 114: {fileID: 1797553577}
+  m_Layer: 5
+  m_Name: AgainButton
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1797553576
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1797553575}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2051635949}
+  m_RootOrder: 6
+  m_AnchorMin: {x: .5, y: .5}
+  m_AnchorMax: {x: .5, y: .5}
+  m_AnchoredPosition: {x: -342, y: -179.229996}
+  m_SizeDelta: {x: 80, y: 80}
+  m_Pivot: {x: .5, y: .5}
+--- !u!114 &1797553577
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1797553575}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1862395651, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  delegates:
+  - eventID: 3
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1486195990}
+          m_MethodName: StartGame
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+--- !u!95 &1797553578
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1797553575}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: bab47e658c3eb8145a730fdc99d18813, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &1797553579
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1797553575}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1392445389, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 3
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: .960784316, g: .960784316, b: .960784316, a: 1}
+    m_PressedColor: {r: .784313738, g: .784313738, b: .784313738, a: 1}
+    m_DisabledColor: {r: .784313738, g: .784313738, b: .784313738, a: .501960814}
+    m_ColorMultiplier: 1
+    m_FadeDuration: .100000001
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 1797553580}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+--- !u!114 &1797553580
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1797553575}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 34ffedbf8a1af8f4c96b5618627082b6, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+--- !u!222 &1797553581
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1797553575}
 --- !u!1 &1843756976
 GameObject:
   m_ObjectHideFlags: 0
@@ -10740,8 +11002,7 @@ MonoBehaviour:
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine, Version=0.0.0.0,
-            Culture=neutral, PublicKeyToken=null
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -10807,8 +11068,7 @@ MonoBehaviour:
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine, Version=0.0.0.0,
-              Culture=neutral, PublicKeyToken=null
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
             m_StringArgument: 
@@ -11122,8 +11382,7 @@ MonoBehaviour:
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine, Version=0.0.0.0,
-            Culture=neutral, PublicKeyToken=null
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -11232,6 +11491,8 @@ RectTransform:
   - {fileID: 1700609337}
   - {fileID: 1229565107}
   - {fileID: 201275237}
+  - {fileID: 451782665}
+  - {fileID: 1797553576}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_AnchorMin: {x: 0, y: 0}
