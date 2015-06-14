@@ -2,14 +2,13 @@
 using UnityEngine.UI;
 using UnityEngine.Advertisements;
 using System.Collections;
-using System.Collections.Generic;
 using System;
 
 public class Shop : MonoBehaviour {
 	int gamePiece = 0;
 	public Canvas confirmCanvas;
-	public Animator equippedAnim;
 	public Text confirmText, coinText;
+	public Button backButton;
 	public Button FreeCoinsButton;
 	public Text FreeCoinsText;
 	string oneHrMark = "1:00:00";
@@ -18,7 +17,6 @@ public class Shop : MonoBehaviour {
 
 	void Start()
 	{
-
 		Advertisement.Initialize ("131625271", false);
 		last = DateTime.Parse(PlayerPrefs.GetString ("LastTimePlayedAd"));
 		if (DateTime.UtcNow - last >= TimeSpan.Parse(oneHrMark) && tm.isConnectedToInternet){
@@ -38,24 +36,19 @@ public class Shop : MonoBehaviour {
 		DateTime now = DateTime.UtcNow;
 		PlayerPrefs.SetString ("LastTimePlayedAd",now.ToString());
 		Advertisement.Show ("rewardedVideoZone");
-		PlayerPrefs.SetInt ("Coins",PlayerPrefs.GetInt("Coins")+20);
+		PlayerPrefs.SetInt ("Coins",PlayerPrefs.GetInt("Coins")+15);
 		FreeCoinsButton.enabled = false;
 		FreeCoinsButton.image.enabled = false;
 		FreeCoinsText.enabled = false;
 	}
 
 	public void BuyWhiteKnight(){
-		//equippedAnim.SetBool("equipped",false);
 		PlayerPrefs.SetInt ("SelectedGamePiece",0);
-		//equippedAnim.SetBool("equipped",true);
 	}
 
 	public void BuyCube(bool TorF){
-		//equippedAnim.SetBool("equipped",false);
-		if (PlayerPrefs.GetString ("BroughtGamePiece").Contains ("cube")) {
-			equippedAnim.SetBool("equipped",true);
+		if (PlayerPrefs.GetString("BroughtGamePiece").Contains("cube"))
 			PlayerPrefs.SetInt ("SelectedGamePiece",1);
-		}
 		else if (!TorF)
 			Confirm (100,1); 
 		else {
@@ -68,11 +61,8 @@ public class Shop : MonoBehaviour {
 	}
 
 	public void BuyPlant(bool TorF){
-		equippedAnim.SetBool("equipped",false);
-		if (PlayerPrefs.GetString ("BroughtGamePiece").Contains ("plant")) {
+		if (PlayerPrefs.GetString ("BroughtGamePiece").Contains ("plant")) 
 			PlayerPrefs.SetInt ("SelectedGamePiece",2);
-			equippedAnim.SetBool("equipped",true);
-		}
 		else if (!TorF)
 			Confirm (100,2);
 		else {
@@ -85,11 +75,8 @@ public class Shop : MonoBehaviour {
 	}
 
 	public void BuyBook(bool TorF){
-		equippedAnim.SetBool("equipped",false);
-		if (PlayerPrefs.GetString ("BroughtGamePiece").Contains ("book")) {
+		if (PlayerPrefs.GetString("BroughtGamePiece").Contains("book"))
 			PlayerPrefs.SetInt ("SelectedGamePiece",3);
-			equippedAnim.SetBool("equipped",true);
-		}
 		else if (!TorF)
 			Confirm (100,3);
 		else {
@@ -102,11 +89,8 @@ public class Shop : MonoBehaviour {
 	}
 
 	public void BuyPostBox(bool TorF){
-		equippedAnim.SetBool("equipped",false);
-		if (PlayerPrefs.GetString ("BroughtGamePiece").Contains ("postbox")) {
+		if (PlayerPrefs.GetString("BroughtGamePiece").Contains("postbox"))
 			PlayerPrefs.SetInt ("SelectedGamePiece",4);
-			equippedAnim.SetBool("equipped",true);
-		}
 		else if (!TorF)
 			Confirm (100,4);
 		else {
@@ -119,11 +103,8 @@ public class Shop : MonoBehaviour {
 	}
 
 	public void BuyGuitar(bool TorF){
-		equippedAnim.SetBool("equipped",false);
-		if (PlayerPrefs.GetString ("BroughtGamePiece").Contains ("guitar")) {
+		if (PlayerPrefs.GetString("BroughtGamePiece").Contains("guitar"))
 			PlayerPrefs.SetInt ("SelectedGamePiece",5);
-			equippedAnim.SetBool("equipped",true);
-		}
 		else if (!TorF)
 			Confirm (100,5);
 		else {
@@ -136,11 +117,8 @@ public class Shop : MonoBehaviour {
 	}
 
 	public void BuyGasBottle(bool TorF){
-		equippedAnim.SetBool("equipped",false);
-		if (PlayerPrefs.GetString ("BroughtGamePiece").Contains ("gasbottle")) {
+		if (PlayerPrefs.GetString("BroughtGamePiece").Contains("gasbottle"))
 			PlayerPrefs.SetInt ("SelectedGamePiece",6);
-			equippedAnim.SetBool("equipped",true);
-		}
 		else if (!TorF)
 			Confirm (100,6);
 		else {
@@ -153,13 +131,10 @@ public class Shop : MonoBehaviour {
 	}
 
 	public void BuyCreeper(bool TorF){
-		equippedAnim.SetBool("equipped",false);
-		if (PlayerPrefs.GetString ("BroughtGamePiece").Contains ("creeper")) {
-			equippedAnim.SetBool("equipped",true);
+		if (PlayerPrefs.GetString("BroughtGamePiece").Contains("creeper"))
 			PlayerPrefs.SetInt ("SelectedGamePiece",19);
-		}
 		else if (!TorF)
-			Confirm (100,19); 
+			Confirm (100,19);
 		else {
 			if (PlayerPrefs.GetInt ("Coins") >= 100) {
 				PlayerPrefs.SetInt ("Coins", PlayerPrefs.GetInt("Coins")-100);
@@ -169,12 +144,23 @@ public class Shop : MonoBehaviour {
 		}
 	}
 
-	public void BuyToilet(bool TorF){
-		equippedAnim.SetBool("equipped",false);
-		if (PlayerPrefs.GetString ("BroughtGamePiece").Contains ("toilet")) {
-			PlayerPrefs.SetInt ("SelectedGamePiece",7);
-			equippedAnim.SetBool("equipped",true);
+	public void BuyAndroidRobot(bool TorF){
+		if (PlayerPrefs.GetString("BroughtGamePiece").Contains("android"))
+			PlayerPrefs.SetInt ("SelectedGamePiece",20);
+		else if (!TorF)
+			Confirm (100,20);
+		else {
+			if (PlayerPrefs.GetInt ("Coins") >= 100) {
+				PlayerPrefs.SetInt ("Coins", PlayerPrefs.GetInt("Coins")-100);
+				PlayerPrefs.SetInt ("SelectedGamePiece",20);
+				PlayerPrefs.SetString("BroughtGamePiece",PlayerPrefs.GetString("BroughtGamePiece")+"android");
+			}
 		}
+	}
+
+	public void BuyToilet(bool TorF){
+		if (PlayerPrefs.GetString("BroughtGamePiece").Contains("toilet"))
+			PlayerPrefs.SetInt ("SelectedGamePiece",7);
 		else if (!TorF)
 			Confirm (100,7);
 		else {
@@ -187,11 +173,8 @@ public class Shop : MonoBehaviour {
 	}
 
 	public void BuyVendingMachine(bool TorF){
-		equippedAnim.SetBool("equipped",false);
-		if (PlayerPrefs.GetString ("BroughtGamePiece").Contains ("vendingmachine")) {
+		if (PlayerPrefs.GetString("BroughtGamePiece").Contains("vendingmachine"))
 			PlayerPrefs.SetInt ("SelectedGamePiece",8);
-			equippedAnim.SetBool("equipped",true);
-		}
 		else if (!TorF)
 			Confirm (100,8);
 		else {
@@ -204,11 +187,8 @@ public class Shop : MonoBehaviour {
 	}
 
 	public void BuyKnuckle(bool TorF){
-		equippedAnim.SetBool("equipped",false);
-		if (PlayerPrefs.GetString ("BroughtGamePiece").Contains ("knuckle")) {
+		if (PlayerPrefs.GetString("BroughtGamePiece").Contains("knuckle"))
 			PlayerPrefs.SetInt ("SelectedGamePiece",9);
-			equippedAnim.SetBool("equipped",true);
-		}
 		else if (!TorF)
 			Confirm (100,9);
 		else {
@@ -221,11 +201,8 @@ public class Shop : MonoBehaviour {
 	}
 	
 	public void BuyWrench(bool TorF){
-		equippedAnim.SetBool("equipped",false);
-		if (PlayerPrefs.GetString ("BroughtGamePiece").Contains ("wrench")) {
+		if (PlayerPrefs.GetString("BroughtGamePiece").Contains("wrench"))
 			PlayerPrefs.SetInt ("SelectedGamePiece",10);
-			equippedAnim.SetBool("equipped",true);
-		}
 		else if (!TorF)
 			Confirm (100,10);
 		else {
@@ -238,11 +215,8 @@ public class Shop : MonoBehaviour {
 	}
 
 	public void BuyPiano(bool TorF){
-		equippedAnim.SetBool("equipped",false);
-		if (PlayerPrefs.GetString ("BroughtGamePiece").Contains ("piano")) {
+		if (PlayerPrefs.GetString("BroughtGamePiece").Contains("piano"))
 			PlayerPrefs.SetInt ("SelectedGamePiece",16);
-			equippedAnim.SetBool("equipped",true);
-		}
 		else if (!TorF)
 			Confirm (115,16);
 		else {
@@ -255,11 +229,8 @@ public class Shop : MonoBehaviour {
 	}
 
 	public void BuyBathTube(bool TorF){
-		equippedAnim.SetBool("equipped",false);
-		if (PlayerPrefs.GetString ("BroughtGamePiece").Contains ("bathtub")) {
+		if (PlayerPrefs.GetString("BroughtGamePiece").Contains("bathtub"))
 			PlayerPrefs.SetInt ("SelectedGamePiece",11);
-			equippedAnim.SetBool("equipped",true);
-		}
 		else if (!TorF)
 			Confirm (175,11);
 		else {
@@ -272,11 +243,8 @@ public class Shop : MonoBehaviour {
 	}
 
 	public void BuyPrinter(bool TorF){
-		equippedAnim.SetBool("equipped",false);
-		if (PlayerPrefs.GetString ("BroughtGamePiece").Contains ("printer")) {
+		if (PlayerPrefs.GetString("BroughtGamePiece").Contains("printer"))
 			PlayerPrefs.SetInt ("SelectedGamePiece",12);
-			equippedAnim.SetBool("equipped",true);
-		}
 		else if (!TorF)
 			Confirm (100,12);
 		else {
@@ -289,11 +257,8 @@ public class Shop : MonoBehaviour {
 	}
 
 	public void BuyChest(bool TorF){
-		equippedAnim.SetBool("equipped",false);
-		if (PlayerPrefs.GetString ("BroughtGamePiece").Contains ("chest")) {
+		if (PlayerPrefs.GetString("BroughtGamePiece").Contains("chest"))
 			PlayerPrefs.SetInt ("SelectedGamePiece",13);
-			equippedAnim.SetBool("equipped",true);
-		}
 		else if (!TorF)
 			Confirm (225,13);
 		else {
@@ -301,16 +266,14 @@ public class Shop : MonoBehaviour {
 				PlayerPrefs.SetInt ("Coins", PlayerPrefs.GetInt ("Coins") - 225);
 				PlayerPrefs.SetInt ("SelectedGamePiece", 13);
 				PlayerPrefs.SetString("BroughtGamePiece",PlayerPrefs.GetString("BroughtGamePiece")+"chest");
+
 			}
 		}
 	}
 	
 	public void BuyExtinguisher(bool TorF){
-		equippedAnim.SetBool("equipped",false);
-		if (PlayerPrefs.GetString ("BroughtGamePiece").Contains ("extinguisher")) {
+		if (PlayerPrefs.GetString("BroughtGamePiece").Contains("extinguisher"))
 			PlayerPrefs.SetInt ("SelectedGamePiece",14);
-			equippedAnim.SetBool("equipped",true);
-		}
 		else if (!TorF)
 			Confirm(200,14);
 		else{
@@ -323,11 +286,8 @@ public class Shop : MonoBehaviour {
 	}
 	
 	public void BuySlotMachine(bool TorF){
-		equippedAnim.SetBool("equipped",false);
-		if (PlayerPrefs.GetString ("BroughtGamePiece").Contains ("slotmachine")) {
+		if (PlayerPrefs.GetString("BroughtGamePiece").Contains("slotmachine"))
 			PlayerPrefs.SetInt ("SelectedGamePiece",15);
-			equippedAnim.SetBool("equipped",true);
-		}
 		else if (!TorF)
 			Confirm(200,15);
 		else{
@@ -340,11 +300,8 @@ public class Shop : MonoBehaviour {
 	}
 
 	public void BuyBillBoard(bool TorF){
-		equippedAnim.SetBool("equipped",false);
-		if (PlayerPrefs.GetString ("BroughtGamePiece").Contains ("billboard")) {
+		if (PlayerPrefs.GetString("BroughtGamePiece").Contains("billboard"))
 			PlayerPrefs.SetInt ("SelectedGamePiece",15);
-			equippedAnim.SetBool("equipped",true);
-		}
 		else if (!TorF)
 			Confirm(9999,17);
 		else{
@@ -357,11 +314,8 @@ public class Shop : MonoBehaviour {
 	}
 
 	public void BuySodaCan(bool TorF){
-		equippedAnim.SetBool("equipped",false);
-		if (PlayerPrefs.GetString ("BroughtGamePiece").Contains ("sodacan")) {
+		if (PlayerPrefs.GetString("BroughtGamePiece").Contains("sodacan"))
 			PlayerPrefs.SetInt ("SelectedGamePiece",18);
-			equippedAnim.SetBool("equipped",true);
-		}
 		else if (!TorF)
 			Confirm (100,18);
 		else {
@@ -374,13 +328,14 @@ public class Shop : MonoBehaviour {
 	}
 
 	public void Confirm(int num, int gameP){
+		backButton.enabled = false;
+		backButton.image.enabled = false;
 		confirmCanvas.enabled = true;
 		confirmText.text = "Confirm? ¢" + num;
 		gamePiece = gameP;
 	}
 
 	public void click(bool TorF){
-		equippedAnim.SetBool("equipped",false);
 		if (TorF) {
 			switch(gamePiece){
 			case 0:
@@ -443,11 +398,13 @@ public class Shop : MonoBehaviour {
 			case 19:
 				BuyCreeper(true);
 				break;
-			}
-			equippedAnim.SetBool("equipped",true);
-
+			case 20:
+				BuyAndroidRobot(true);
+				break;
+			}		
 		}
-		coinText.text = ""+PlayerPrefs.GetInt("Coins");
+		backButton.enabled = true;
+		backButton.image.enabled = true;
 		confirmCanvas.enabled = false;
 	} 
 

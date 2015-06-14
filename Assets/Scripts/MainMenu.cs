@@ -5,20 +5,10 @@ using System.Collections;
 
 public class MainMenu : MonoBehaviour {
 
-	private Canvas ShopCanvas,GameCanvas;
-	private Canvas infoPage, pausePage;
+	public Canvas ShopCanvas,GameCanvas;
+	public Canvas infoPage, pausePage;
 	public AudioMixerSnapshot paused;
 	public AudioMixerSnapshot unpaused;
-	private Text coinText1, coinText2;
-
-	void Start(){
-		ShopCanvas = GameObject.Find("ShopCanvas").GetComponent<Canvas>();
-		GameCanvas = GameObject.Find("GameCanvas").GetComponent<Canvas>();
-		infoPage = GameObject.Find("InfoCanvas").GetComponent<Canvas>();
-		pausePage = GameObject.Find("PauseCanvas").GetComponent<Canvas>();
-		coinText1 = GameObject.Find("CoinText").GetComponent<Text>();
-		coinText2 = GameObject.Find("CoinText").GetComponent<Text>();
-	}
 
 	public void StartGame(){
 		Application.LoadLevel ("Game");
@@ -31,8 +21,6 @@ public class MainMenu : MonoBehaviour {
 	public void Shop(){
 		GameCanvas.enabled = !GameCanvas.enabled;
 		ShopCanvas.enabled = !ShopCanvas.enabled;
-		coinText1.text = ""+PlayerPrefs.GetInt("Coins");
-		coinText2.text = ""+PlayerPrefs.GetInt("Coins");
 	}
 
 	public void Pause(){

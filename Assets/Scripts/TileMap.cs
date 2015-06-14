@@ -28,6 +28,7 @@ public class TileMap : MonoBehaviour {
 	public GameOver GameO;
 	public float smooth = 5.5f;
 	public bool isConnectedToInternet = true;
+	public GameObject check;
 	bool stillHasTime = true;
 	bool getGamePiece = false;
 	bool isHaveExtinguisher = false;
@@ -46,14 +47,12 @@ public class TileMap : MonoBehaviour {
 	AudioSource source;
 	bool flag = false,AdSetting = false;
 
-	void OnGUI(){
-		if(GUILayout.Button("hi")){
-			PlayerPrefs.SetInt("Coins",PlayerPrefs.GetInt("Coins")-100);
-		}
+
+	void Awake(){
+		isConnectedToInternet = TestConnection ();
 	}
 
 	void Start() {
-		isConnectedToInternet = TestConnection ();
 		coinText.text = PlayerPrefs.GetInt("Coins")+"";
 		if (PlayerPrefs.GetInt("AdCount") != 9 && !Advertisement.isShowing)
 			PlayerPrefs.SetInt("AdCount",PlayerPrefs.GetInt("AdCount")+1);
@@ -77,6 +76,7 @@ public class TileMap : MonoBehaviour {
 		if (Input.GetKeyDown(KeyCode.Escape)) Application.Quit(); 
 		if (GameO.time <= 0 ){
 			stillHasTime = false;
+			check.transform.position = GameObject.Find (selectedUnit[PlayerPrefs.GetInt ("SelectedGamePiece")].name).transform.position;
 		}
 		if (PlayerPrefs.GetInt("AdCount") == 9 && !flag) {
 			PlayerPrefs.SetInt("AdCount",1);
