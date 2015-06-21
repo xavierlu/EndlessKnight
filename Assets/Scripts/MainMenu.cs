@@ -9,6 +9,7 @@ public class MainMenu : MonoBehaviour {
 	public Canvas infoPage, pausePage;
 	public AudioMixerSnapshot paused;
 	public AudioMixerSnapshot unpaused;
+	public Text coinText,coinText2;
 
 	public void StartGame(){
 		Application.LoadLevel ("Game");

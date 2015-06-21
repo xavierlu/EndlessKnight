@@ -56,12 +56,13 @@ public class Shop : MonoBehaviour {
 				PlayerPrefs.SetInt ("Coins", PlayerPrefs.GetInt("Coins")-100);
 				PlayerPrefs.SetInt ("SelectedGamePiece",1);
 				PlayerPrefs.SetString("BroughtGamePiece",PlayerPrefs.GetString("BroughtGamePiece")+"cube");
+				coinText.text = ""+PlayerPrefs.GetInt("Coins");
 			}
 		}
 	}
 
 	public void BuyPlant(bool TorF){
-		if (PlayerPrefs.GetString ("BroughtGamePiece").Contains ("plant")) 
+		if (PlayerPrefs.GetString("BroughtGamePiece").Contains("plant"))
 			PlayerPrefs.SetInt ("SelectedGamePiece",2);
 		else if (!TorF)
 			Confirm (100,2);
@@ -70,6 +71,7 @@ public class Shop : MonoBehaviour {
 				PlayerPrefs.SetInt ("Coins", PlayerPrefs.GetInt("Coins")-100);
 				PlayerPrefs.SetInt ("SelectedGamePiece",2);
 				PlayerPrefs.SetString("BroughtGamePiece",PlayerPrefs.GetString("BroughtGamePiece")+"plant");
+				coinText.text = ""+PlayerPrefs.GetInt("Coins");
 			}
 		}
 	}
@@ -84,6 +86,7 @@ public class Shop : MonoBehaviour {
 				PlayerPrefs.SetInt ("Coins", PlayerPrefs.GetInt("Coins")-100);
 				PlayerPrefs.SetInt ("SelectedGamePiece",3);
 				PlayerPrefs.SetString("BroughtGamePiece",PlayerPrefs.GetString("BroughtGamePiece")+"book");
+				coinText.text = ""+PlayerPrefs.GetInt("Coins");
 			}
 		}
 	}
@@ -98,6 +101,7 @@ public class Shop : MonoBehaviour {
 				PlayerPrefs.SetInt ("Coins", PlayerPrefs.GetInt("Coins")-100);
 				PlayerPrefs.SetInt ("SelectedGamePiece",4);
 				PlayerPrefs.SetString("BroughtGamePiece",PlayerPrefs.GetString("BroughtGamePiece")+"postbox");
+				coinText.text = ""+PlayerPrefs.GetInt("Coins");
 			}
 		}
 	}
@@ -112,6 +116,7 @@ public class Shop : MonoBehaviour {
 				PlayerPrefs.SetInt ("Coins", PlayerPrefs.GetInt("Coins")-100);
 				PlayerPrefs.SetInt ("SelectedGamePiece",5);
 				PlayerPrefs.SetString("BroughtGamePiece",PlayerPrefs.GetString("BroughtGamePiece")+"guitar");
+				coinText.text = ""+PlayerPrefs.GetInt("Coins");
 			}
 		}
 	}
@@ -126,34 +131,7 @@ public class Shop : MonoBehaviour {
 				PlayerPrefs.SetInt ("Coins", PlayerPrefs.GetInt("Coins")-100);
 				PlayerPrefs.SetInt ("SelectedGamePiece",6);
 				PlayerPrefs.SetString("BroughtGamePiece",PlayerPrefs.GetString("BroughtGamePiece")+"gasbottle");
-			}
-		}
-	}
-
-	public void BuyCreeper(bool TorF){
-		if (PlayerPrefs.GetString("BroughtGamePiece").Contains("creeper"))
-			PlayerPrefs.SetInt ("SelectedGamePiece",19);
-		else if (!TorF)
-			Confirm (100,19);
-		else {
-			if (PlayerPrefs.GetInt ("Coins") >= 100) {
-				PlayerPrefs.SetInt ("Coins", PlayerPrefs.GetInt("Coins")-100);
-				PlayerPrefs.SetInt ("SelectedGamePiece",19);
-				PlayerPrefs.SetString("BroughtGamePiece",PlayerPrefs.GetString("BroughtGamePiece")+"creeper");
-			}
-		}
-	}
-
-	public void BuyAndroidRobot(bool TorF){
-		if (PlayerPrefs.GetString("BroughtGamePiece").Contains("android"))
-			PlayerPrefs.SetInt ("SelectedGamePiece",20);
-		else if (!TorF)
-			Confirm (100,20);
-		else {
-			if (PlayerPrefs.GetInt ("Coins") >= 100) {
-				PlayerPrefs.SetInt ("Coins", PlayerPrefs.GetInt("Coins")-100);
-				PlayerPrefs.SetInt ("SelectedGamePiece",20);
-				PlayerPrefs.SetString("BroughtGamePiece",PlayerPrefs.GetString("BroughtGamePiece")+"android");
+				coinText.text = ""+PlayerPrefs.GetInt("Coins");
 			}
 		}
 	}
@@ -168,6 +146,7 @@ public class Shop : MonoBehaviour {
 				PlayerPrefs.SetInt ("Coins", PlayerPrefs.GetInt("Coins")-100);
 			PlayerPrefs.SetInt ("SelectedGamePiece",7);
 				PlayerPrefs.SetString("BroughtGamePiece",PlayerPrefs.GetString("BroughtGamePiece")+"toilet");
+				coinText.text = ""+PlayerPrefs.GetInt("Coins");
 			}
 		}
 	}
@@ -182,6 +161,7 @@ public class Shop : MonoBehaviour {
 				PlayerPrefs.SetInt ("Coins", PlayerPrefs.GetInt("Coins")-100);
 			PlayerPrefs.SetInt ("SelectedGamePiece",8);
 				PlayerPrefs.SetString("BroughtGamePiece",PlayerPrefs.GetString("BroughtGamePiece")+"vendingmachine");
+				coinText.text = ""+PlayerPrefs.GetInt("Coins");
 			}
 		}
 	}
@@ -196,6 +176,7 @@ public class Shop : MonoBehaviour {
 			PlayerPrefs.SetInt ("Coins", PlayerPrefs.GetInt("Coins")-100);
 			PlayerPrefs.SetInt ("SelectedGamePiece",9);
 				PlayerPrefs.SetString("BroughtGamePiece",PlayerPrefs.GetString("BroughtGamePiece")+"knuckle");
+				coinText.text = ""+PlayerPrefs.GetInt("Coins");
 			}
 		}
 	}
@@ -210,6 +191,7 @@ public class Shop : MonoBehaviour {
 				PlayerPrefs.SetInt ("Coins", PlayerPrefs.GetInt("Coins")-100);
 			PlayerPrefs.SetInt ("SelectedGamePiece",10);
 				PlayerPrefs.SetString("BroughtGamePiece",PlayerPrefs.GetString("BroughtGamePiece")+"wrench");
+				coinText.text = ""+PlayerPrefs.GetInt("Coins");
 			}
 		}
 	}
@@ -224,6 +206,7 @@ public class Shop : MonoBehaviour {
 				PlayerPrefs.SetInt ("Coins", PlayerPrefs.GetInt("Coins")-115);
 				PlayerPrefs.SetInt ("SelectedGamePiece",16);
 				PlayerPrefs.SetString("BroughtGamePiece",PlayerPrefs.GetString("BroughtGamePiece")+"piano");
+				coinText.text = ""+PlayerPrefs.GetInt("Coins");
 			}
 		}
 	}
@@ -238,6 +221,7 @@ public class Shop : MonoBehaviour {
 				PlayerPrefs.SetInt ("Coins", PlayerPrefs.GetInt("Coins")-175);
 				PlayerPrefs.SetInt ("SelectedGamePiece",11);
 				PlayerPrefs.SetString("BroughtGamePiece",PlayerPrefs.GetString("BroughtGamePiece")+"bathtub");
+				coinText.text = ""+PlayerPrefs.GetInt("Coins");
 			}
 		}
 	}
@@ -252,6 +236,7 @@ public class Shop : MonoBehaviour {
 				PlayerPrefs.SetInt ("Coins", PlayerPrefs.GetInt("Coins")-100);
 				PlayerPrefs.SetInt ("SelectedGamePiece",12);
 				PlayerPrefs.SetString("BroughtGamePiece",PlayerPrefs.GetString("BroughtGamePiece")+"printer");
+				coinText.text = ""+PlayerPrefs.GetInt("Coins");
 			}
 		}
 	}
@@ -266,7 +251,7 @@ public class Shop : MonoBehaviour {
 				PlayerPrefs.SetInt ("Coins", PlayerPrefs.GetInt ("Coins") - 225);
 				PlayerPrefs.SetInt ("SelectedGamePiece", 13);
 				PlayerPrefs.SetString("BroughtGamePiece",PlayerPrefs.GetString("BroughtGamePiece")+"chest");
-
+				coinText.text = ""+PlayerPrefs.GetInt("Coins");
 			}
 		}
 	}
@@ -281,6 +266,7 @@ public class Shop : MonoBehaviour {
 				PlayerPrefs.SetInt ("Coins", PlayerPrefs.GetInt("Coins")-200);
 				PlayerPrefs.SetInt ("SelectedGamePiece",14);
 				PlayerPrefs.SetString("BroughtGamePiece",PlayerPrefs.GetString("BroughtGamePiece")+"extinguisher");
+				coinText.text = ""+PlayerPrefs.GetInt("Coins");
 			}
 		}
 	}
@@ -295,6 +281,7 @@ public class Shop : MonoBehaviour {
 				PlayerPrefs.SetInt ("Coins", PlayerPrefs.GetInt("Coins")-200);
 				PlayerPrefs.SetInt ("SelectedGamePiece",15);
 				PlayerPrefs.SetString("BroughtGamePiece",PlayerPrefs.GetString("BroughtGamePiece")+"slotmachine");
+				coinText.text = ""+PlayerPrefs.GetInt("Coins");
 			}
 		}
 	}
@@ -309,6 +296,7 @@ public class Shop : MonoBehaviour {
 				PlayerPrefs.SetInt ("Coins", PlayerPrefs.GetInt("Coins")-9999);
 				PlayerPrefs.SetInt ("SelectedGamePiece",17);
 				PlayerPrefs.SetString("BroughtGamePiece",PlayerPrefs.GetString("BroughtGamePiece")+"billboard");
+				coinText.text = ""+PlayerPrefs.GetInt("Coins");
 			}
 		}
 	}
@@ -323,13 +311,12 @@ public class Shop : MonoBehaviour {
 				PlayerPrefs.SetInt ("Coins", PlayerPrefs.GetInt("Coins")-100);
 				PlayerPrefs.SetInt ("SelectedGamePiece",18);
 				PlayerPrefs.SetString("BroughtGamePiece",PlayerPrefs.GetString("BroughtGamePiece")+"sodacan");
+				coinText.text = ""+PlayerPrefs.GetInt("Coins");
 			}
 		}
 	}
 
 	public void Confirm(int num, int gameP){
-		backButton.enabled = false;
-		backButton.image.enabled = false;
 		confirmCanvas.enabled = true;
 		confirmText.text = "Confirm? ¢" + num;
 		gamePiece = gameP;
@@ -395,16 +382,8 @@ public class Shop : MonoBehaviour {
 			case 18:
 				BuySodaCan(true);
 				break;
-			case 19:
-				BuyCreeper(true);
-				break;
-			case 20:
-				BuyAndroidRobot(true);
-				break;
 			}		
 		}
-		backButton.enabled = true;
-		backButton.image.enabled = true;
 		confirmCanvas.enabled = false;
 	} 
 

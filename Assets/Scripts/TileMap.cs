@@ -10,7 +10,6 @@ public class TileMap : MonoBehaviour {
 	public GameObject[] selectedUnit;
 	public GameObject tiles;
 	public GameObject Target;
-	public GameObject coinsManager;
 	public GameObject fire;
 	public Camera[] cams;
 	public AudioClip[] coinSound; int coinSoundSelection = 0;
@@ -28,7 +27,7 @@ public class TileMap : MonoBehaviour {
 	public GameOver GameO;
 	public float smooth = 5.5f;
 	public bool isConnectedToInternet = true;
-	public GameObject check;
+	public Image check;
 	bool stillHasTime = true;
 	bool getGamePiece = false;
 	bool isHaveExtinguisher = false;
@@ -47,6 +46,11 @@ public class TileMap : MonoBehaviour {
 	AudioSource source;
 	bool flag = false,AdSetting = false;
 
+
+	void OnGUI(){
+		if (GUILayout.Button("free coin"))
+			PlayerPrefs.SetInt ("Coins",PlayerPrefs.GetInt("Coins")+15);
+	}
 
 	void Awake(){
 		isConnectedToInternet = TestConnection ();
