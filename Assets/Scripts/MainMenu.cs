@@ -5,7 +5,7 @@ using System.Collections;
 
 public class MainMenu : MonoBehaviour {
 
-	public Canvas ShopCanvas,GameCanvas;
+	public Canvas ShopCanvas,GameCanvas,HelpCanvas;
 	public Canvas infoPage, pausePage;
 	public AudioMixerSnapshot paused;
 	public AudioMixerSnapshot unpaused;
@@ -17,6 +17,10 @@ public class MainMenu : MonoBehaviour {
 
 	public void GameMenu(){
 		Application.LoadLevel ("MainMenu");
+	}
+
+	public void Help(){
+		HelpCanvas.enabled = !HelpCanvas.enabled;
 	}
 
 	public void Shop(){

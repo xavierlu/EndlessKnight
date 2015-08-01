@@ -201,7 +201,7 @@ public class TileMap : MonoBehaviour {
 		do{
 			coinX = Random.Range (1,mapSizeX+1);
 			coinY = Random.Range (1,mapSizeY+1);
-		}while(fireGO[TargetX,TargetY]);
+		}while(fireGO[coinX,coinY]);
 		coinGO.transform.position = new Vector3 (coinX, 0, coinY);
 	}
 
@@ -286,12 +286,12 @@ public class TileMap : MonoBehaviour {
 					}
 				}
 				if(coinX == playerCurrPositionX && coinY == playerCurrPositionY){
-					LerpCoinGO();
 					source.PlayOneShot(coinSound[0]);
 					PlayerPrefs.SetInt("Coins",PlayerPrefs.GetInt("Coins")+AddCoin);
 					if (currGamePiece == 15)
 						AddCoin = Random.Range(-3,6);
 					coinText.text = ""+PlayerPrefs.GetInt("Coins");
+					LerpCoinGO();
 				}
 			}
 		}
