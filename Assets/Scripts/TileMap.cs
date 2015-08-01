@@ -10,9 +10,10 @@ public class TileMap : MonoBehaviour {
 	public GameObject[] selectedUnit;
 	public GameObject tiles;
 	public GameObject Target;
+	public GameObject Coin;
 	public GameObject fire;
 	public Camera[] cams;
-	public AudioClip[] coinSound; int coinSoundSelection = 0;
+	public AudioClip[] coinSound; int coinSoundSelection = 8;
 	public AudioMixer MasterMixer;
 	public GameObject[] BackgroundSound;
 	public Text currentScoreText;
@@ -37,12 +38,15 @@ public class TileMap : MonoBehaviour {
 	int playerCurrPositionY;
 	int TargetX;
 	int TargetY;
+	int coinX;
+	int coinY;
 	int obstacleX = 0;
 	int obstacleY = 0;
 	bool[,] fireGO = new bool[9,9];
 	GameObject[,] go = new GameObject[9,9];
-	GameObject playerGO;
+	GameObject playerGO; //Go = gameobject
 	GameObject TargetGO;
+	GameObject coinGO;
 	AudioSource source;
 	bool flag = false,AdSetting = false;
 
@@ -74,6 +78,7 @@ public class TileMap : MonoBehaviour {
 			source = playerGO.GetComponent<AudioSource>();
 			getGamePiece = true;
 		}
+		GameO.SetTime((float)TimeToRestart+0.9f);
 	}
 
 	void Update(){
@@ -140,15 +145,13 @@ public class TileMap : MonoBehaviour {
 			for (int i = 0; i < 3; i++){
 				cams[i].backgroundColor = new Color (0.690196f,0.878431f,0.901961f);
 			}
-			TimeToRestart = 7;
-			coinSoundSelection = 5;
+			TimeToRestart = 8;
 			break;
 		case 12:
 			for (int i = 0; i < 3; i++){
 				cams[i].backgroundColor = new Color (0.690196f,0.878431f,0.901961f);
 			}
-			TimeToRestart = 8;
-			coinSoundSelection = 6;
+			TimeToRestart = 9;
 			break;
 		case 13:
 			for (int i = 0; i < 3; i++){
@@ -181,6 +184,9 @@ public class TileMap : MonoBehaviour {
 		TargetX = Random.Range (1,mapSizeX+1);
 		TargetY = Random.Range (1,mapSizeY+1);
 		TargetGO = (GameObject)Instantiate (Target, new Vector3(TargetX,0,TargetY),Quaternion.identity);
+		coinX = Random.Range (1,mapSizeX+1);
+		coinY = Random.Range (1,mapSizeY+1);
+		coinGO = (GameObject)Instantiate (Coin, new Vector3(coinX,0,coinY),Quaternion.identity);
 	}
 
 	void LerpTargetGO(){
@@ -188,7 +194,15 @@ public class TileMap : MonoBehaviour {
 			TargetX = Random.Range (1,mapSizeX+1);
 			TargetY = Random.Range (1,mapSizeY+1);
 		}while(fireGO[TargetX,TargetY]);
-		TargetGO.transform.position = Vector3.Lerp (TargetGO.transform.position, new Vector3(TargetX,0,TargetY),1f);
+		TargetGO.transform.position = new Vector3 (TargetX, 0, TargetY);
+	}
+
+	void LerpCoinGO(){
+		do{
+			coinX = Random.Range (1,mapSizeX+1);
+			coinY = Random.Range (1,mapSizeY+1);
+		}while(fireGO[TargetX,TargetY]);
+		coinGO.transform.position = new Vector3 (coinX, 0, coinY);
 	}
 
 	void SetObstacle(){
@@ -257,12 +271,9 @@ public class TileMap : MonoBehaviour {
 				playerCurrPositionY = y;
 				playerGO.transform.position = new Vector3(x, 0, y);	
 				if (TargetX == playerCurrPositionX && TargetY == playerCurrPositionY) {
-					if (currGamePiece == 15)
-						AddCoin = Random.Range(-3,6);
-					PlayerPrefs.SetInt("Coins",PlayerPrefs.GetInt("Coins")+AddCoin);
 					source.PlayOneShot(coinSound[coinSoundSelection]);
 					if(isHaveExtinguisher && Random.Range(1,3)==1)
-						SetObstacle();
+						;// do nothing
 					else
 						SetObstacle();
 					LerpTargetGO();
@@ -273,6 +284,13 @@ public class TileMap : MonoBehaviour {
 						breakRecordAnim.SetTrigger("Break");
 						PlayerPrefs.SetInt("HighScore", currentScore);
 					}
+				}
+				if(coinX == playerCurrPositionX && coinY == playerCurrPositionY){
+					LerpCoinGO();
+					source.PlayOneShot(coinSound[0]);
+					PlayerPrefs.SetInt("Coins",PlayerPrefs.GetInt("Coins")+AddCoin);
+					if (currGamePiece == 15)
+						AddCoin = Random.Range(-3,6);
 					coinText.text = ""+PlayerPrefs.GetInt("Coins");
 				}
 			}

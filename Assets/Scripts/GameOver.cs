@@ -3,7 +3,7 @@ using UnityEngine.UI;
 
 public class GameOver : MonoBehaviour
 { 
-	public float time = 7.5f;
+	public float time;
 	float restartTimer;
 	Animator anim;                          
 	public Text Timetext;

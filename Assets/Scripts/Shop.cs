@@ -36,7 +36,7 @@ public class Shop : MonoBehaviour {
 		DateTime now = DateTime.UtcNow;
 		PlayerPrefs.SetString ("LastTimePlayedAd",now.ToString());
 		Advertisement.Show ("rewardedVideoZone");
-		PlayerPrefs.SetInt ("Coins",PlayerPrefs.GetInt("Coins")+15);
+		PlayerPrefs.SetInt ("Coins",PlayerPrefs.GetInt("Coins")+20);
 		FreeCoinsButton.enabled = false;
 		FreeCoinsButton.image.enabled = false;
 		FreeCoinsText.enabled = false;
@@ -316,7 +316,24 @@ public class Shop : MonoBehaviour {
 		}
 	}
 
+	public void BuyAndroidRobot(bool TorF){
+		if (PlayerPrefs.GetString("BroughtGamePiece").Contains("android"))
+			PlayerPrefs.SetInt ("SelectedGamePiece",19);
+		else if (!TorF)
+			Confirm (100,19);
+		else {
+			if (PlayerPrefs.GetInt ("Coins") >= 100) {
+				PlayerPrefs.SetInt ("Coins", PlayerPrefs.GetInt("Coins")-100);
+				PlayerPrefs.SetInt ("SelectedGamePiece",19);
+				PlayerPrefs.SetString("BroughtGamePiece",PlayerPrefs.GetString("BroughtGamePiece")+"android");
+				coinText.text = ""+PlayerPrefs.GetInt("Coins");
+			}
+		}
+	}
+
 	public void Confirm(int num, int gameP){
+		backButton.enabled = false;
+		backButton.image.enabled = false;
 		confirmCanvas.enabled = true;
 		confirmText.text = "Confirm? ¢" + num;
 		gamePiece = gameP;
@@ -382,9 +399,14 @@ public class Shop : MonoBehaviour {
 			case 18:
 				BuySodaCan(true);
 				break;
+			case 19:
+				BuyAndroidRobot(true);
+				break;
 			}		
 		}
 		confirmCanvas.enabled = false;
+		backButton.enabled = true;
+		backButton.image.enabled = true;
 	} 
 
 	void OnDestroy(){
