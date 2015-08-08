@@ -335,7 +335,7 @@ public class Shop : MonoBehaviour {
 		backButton.enabled = false;
 		backButton.image.enabled = false;
 		confirmCanvas.enabled = true;
-		confirmText.text = "Confirm? ¢" + num;
+		confirmText.text = "¢" + num + "?";
 		gamePiece = gameP;
 	}
 

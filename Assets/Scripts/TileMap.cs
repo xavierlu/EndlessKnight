@@ -209,7 +209,7 @@ public class TileMap : MonoBehaviour {
 		do{
 			obstacleX = Random.Range (1,mapSizeX+1);
 			obstacleY = Random.Range (1,mapSizeY+1);
-		}while(obstacleX == playerCurrPositionX && obstacleY == playerCurrPositionY);
+		}while(obstacleX == playerCurrPositionX && obstacleY == playerCurrPositionY && obstacleX == coinX && obstacleY == coinY);
 		go [obstacleX, obstacleY].GetComponent<Renderer>().material.color = Color.red;
 		SetTileColor (obstacleX, obstacleY, "red");
 		Instantiate (fire, new Vector3(obstacleX,0.25f,obstacleY), Quaternion.identity);
@@ -272,9 +272,7 @@ public class TileMap : MonoBehaviour {
 				playerGO.transform.position = new Vector3(x, 0, y);	
 				if (TargetX == playerCurrPositionX && TargetY == playerCurrPositionY) {
 					source.PlayOneShot(coinSound[coinSoundSelection]);
-					if(isHaveExtinguisher && Random.Range(1,3)==1)
-						;// do nothing
-					else
+					if(!(isHaveExtinguisher && Random.Range(1,3)==1))
 						SetObstacle();
 					LerpTargetGO();
 					GameO.SetTime((float)TimeToRestart+0.9f);
