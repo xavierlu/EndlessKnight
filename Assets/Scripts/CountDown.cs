@@ -5,7 +5,7 @@ using System.Collections;
 
 public class CountDown : MonoBehaviour {
 	float CountDownTime = 4.0f;
-	public bool StartGame = false;
+	public bool StartGame = false, tapped = false;
 	public Text countDownText;
 
 	void Start(){
@@ -13,14 +13,21 @@ public class CountDown : MonoBehaviour {
 	}
 
 	void Update () {
-		if(CountDownTime < 1.1){
-			StartGame = true;
-			countDownText.text = " ";
-
+		if (Input.GetMouseButtonDown (0)){
+			if(!tapped)
+				countDownText.rectTransform.position = new Vector3(countDownText.rectTransform.position.x,countDownText.rectTransform.position.y+190.0f,countDownText.rectTransform.position.z);
+			tapped = true;
+			countDownText.fontSize = 125;
 		}
-		else if (!StartGame && !Advertisement.isShowing) {
-			CountDownTime -= Time.deltaTime;	
-			countDownText.text = "" + (int)CountDownTime;
+		if (tapped){
+			if(CountDownTime < 1.1){
+				StartGame = true;
+				countDownText.text = " ";
+			}
+			else if (!StartGame && !Advertisement.isShowing) {
+				CountDownTime -= Time.deltaTime;	
+				countDownText.text = "" + (int)CountDownTime;
+			}	
 		}
 	}
 

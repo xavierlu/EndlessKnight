@@ -118,6 +118,9 @@ public class TileMap : MonoBehaviour {
 			break;
 		case 5:
 			Instantiate(BackgroundSound[Random.Range(0,3)],new Vector3(4.5f,0f,4.5f),Quaternion.identity);
+			for (int i = 0; i < 3; i++){
+				cams[i].backgroundColor = new Color (0,0.81f,1f);
+			}
 			break;
 		case 6:
 			for (int i = 0; i < 3; i++){
@@ -202,6 +205,7 @@ public class TileMap : MonoBehaviour {
 			coinX = Random.Range (1,mapSizeX+1);
 			coinY = Random.Range (1,mapSizeY+1);
 		}while(fireGO[coinX,coinY]);
+
 		coinGO.transform.position = new Vector3 (coinX, 0, coinY);
 	}
 
