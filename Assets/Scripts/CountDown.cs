@@ -5,8 +5,9 @@ using System.Collections;
 
 public class CountDown : MonoBehaviour {
 	float CountDownTime = 4.0f;
-	public bool StartGame = false, tapped = false;
-	public Text countDownText;
+	public bool StartGame = false;
+	private bool tapped = false;
+	public Text TapAnywheretoStartText,countDownText;
 
 	void Start(){
 		Advertisement.Initialize ("131625271", false);
@@ -15,9 +16,8 @@ public class CountDown : MonoBehaviour {
 	void Update () {
 		if (Input.GetMouseButtonDown (0)){
 			if(!tapped)
-				countDownText.rectTransform.position = new Vector3(countDownText.rectTransform.position.x,countDownText.rectTransform.position.y+190.0f,countDownText.rectTransform.position.z);
+				TapAnywheretoStartText.enabled = false;
 			tapped = true;
-			countDownText.fontSize = 125;
 		}
 		if (tapped){
 			if(CountDownTime < 1.1){
