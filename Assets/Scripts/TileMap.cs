@@ -304,8 +304,8 @@ public class TileMap : MonoBehaviour {
 	}
 		
 	public void FBShare(){
-		ShareToFacebook ("http://www.facebook.com/", "Endless Knight", "Come, download and play Endless Knight!",
-		                 "My high score is "+PlayerPrefs.GetInt("HighScore")+" in Endless Knight. Can you beat me ;)", "http://i57.tinypic.com/ftfrjm.jpg"
+		ShareToFacebook ("http://www.facebook.com/", "Endless Knight", "Download and play Endless Knight!",
+		                 "My high score is "+PlayerPrefs.GetInt("HighScore")+" in Endless Knight. Can you beat me ;)", "http://i61.tinypic.com/2a6ryar.png"
 		                 , "http://www.facebook.com/");
 	}
 
