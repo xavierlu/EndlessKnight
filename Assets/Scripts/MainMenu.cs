@@ -11,6 +11,12 @@ public class MainMenu : MonoBehaviour {
 	public AudioMixerSnapshot unpaused;
 	public Text coinText,coinText2;
 
+	void Start(){
+		PlayerPrefs.SetInt ("Coins", 0);
+		if (PlayerPrefs.GetInt ("Coins") == 0)
+			HelpCanvas.enabled = true;
+	}
+
 	public void StartGame(){
 		Application.LoadLevel ("Game");
 	}

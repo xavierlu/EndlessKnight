@@ -1,6 +1,5 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.Advertisements;
 using System.Collections;
 
 public class CountDown : MonoBehaviour {
@@ -8,13 +7,10 @@ public class CountDown : MonoBehaviour {
 	public bool StartGame = false;
 	private bool tapped = false;
 	public Text TapAnywheretoStartText,countDownText;
-
-	void Start(){
-		Advertisement.Initialize ("131625271", false);
-	}
+	public Canvas helpCanvas;
 
 	void Update () {
-		if (Input.GetMouseButtonDown (0)){
+		if (Input.GetMouseButtonDown (0) && !helpCanvas.enabled){
 			if(!tapped)
 				TapAnywheretoStartText.enabled = false;
 			tapped = true;
@@ -24,7 +20,7 @@ public class CountDown : MonoBehaviour {
 				StartGame = true;
 				countDownText.text = " ";
 			}
-			else if (!StartGame && !Advertisement.isShowing) {
+			else if (!StartGame) {
 				CountDownTime -= Time.deltaTime;	
 				countDownText.text = "" + (int)CountDownTime;
 			}	

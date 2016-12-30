@@ -1,6 +1,5 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.Advertisements;
 using UnityEngine.Audio;
 using UnityEngine.Events;
 using System.Collections;
@@ -27,12 +26,11 @@ public class TileMap : MonoBehaviour {
 	public CountDown CD;
 	public GameOver GameO;
 	public float smooth = 5.5f;
-	public bool isConnectedToInternet = true;
 	public Image check;
 	bool stillHasTime = true;
 	bool getGamePiece = false;
 	bool isHaveExtinguisher = false;
-	int AddCoin = 1;
+	int AddCoin = 20;
 	int currentScore = 0;
 	int playerCurrPositionX;
 	int playerCurrPositionY;
@@ -50,25 +48,12 @@ public class TileMap : MonoBehaviour {
 	AudioSource source;
 	bool flag = false,AdSetting = false;
 
-
-	void OnGUI(){
-		if (GUILayout.Button("free coin"))
-			PlayerPrefs.SetInt ("Coins",PlayerPrefs.GetInt("Coins")+15);
-	}
-
-	void Awake(){
-		isConnectedToInternet = TestConnection ();
-	}
-
 	void Start() {
 		coinText.text = PlayerPrefs.GetInt("Coins")+"";
-		if (PlayerPrefs.GetInt("AdCount") != 9 && !Advertisement.isShowing)
-			PlayerPrefs.SetInt("AdCount",PlayerPrefs.GetInt("AdCount")+1);
 		MasterMixer.SetFloat ("sfxVol", 0.0f);
 		MasterMixer.SetFloat ("musicVol", -10.0f);
 		GenerateMapVisual();
 		InstantiateTargetTile ();
-		Advertisement.Initialize ("131625271", false);
 		if (!getGamePiece) {
 			currGamePiece = PlayerPrefs.GetInt("SelectedGamePiece");
 			Advantage();
@@ -79,6 +64,19 @@ public class TileMap : MonoBehaviour {
 			getGamePiece = true;
 		}
 		GameO.SetTime((float)TimeToRestart+0.9f);
+		for(int i = 1; i <= mapSizeX; i++){
+			for(int j = 1; j <= mapSizeX; j++){
+				ClickableTile temp = go[i,j].GetComponent<ClickableTile> ();
+				int x = temp.tileX;
+				int y = temp.tileY;
+				if ((GetSlope (playerCurrPositionX, playerCurrPositionY, x, y) == 2 || GetSlope (playerCurrPositionX, playerCurrPositionY, x, y) == 0.5 ||
+				    GetSlope (playerCurrPositionX, playerCurrPositionY, x, y) == -2 || GetSlope (playerCurrPositionX, playerCurrPositionY, x, y) == -0.5)
+				    && Vector3.Distance (new Vector3 (playerCurrPositionX, 0, playerCurrPositionY), new Vector3 (x, 0, y)) == Mathf.Sqrt (5.0f)) {
+					go [x, y].GetComponent<Renderer> ().material.color = new Color (0.4f, 0.95f, 0.4f);
+				}
+			}
+		}
+
 	}
 
 	void Update(){
@@ -86,12 +84,6 @@ public class TileMap : MonoBehaviour {
 		if (GameO.time <= 0 ){
 			stillHasTime = false;
 			check.transform.position = GameObject.Find (selectedUnit[PlayerPrefs.GetInt ("SelectedGamePiece")].name).transform.position;
-		}
-		if (PlayerPrefs.GetInt("AdCount") == 9 && !flag) {
-			PlayerPrefs.SetInt("AdCount",1);
-			flag = true;
-			if(!AdSetting && isConnectedToInternet)
-				Advertisement.Show ("rewardedVideoZone");
 		}
 	}
 	void Advantage(){
@@ -160,7 +152,7 @@ public class TileMap : MonoBehaviour {
 			for (int i = 0; i < 3; i++){
 				cams[i].backgroundColor = new Color (0.870588f,0.721569f,0.529412f);
 			}
-			AddCoin = 2;
+			AddCoin = 40;
 			break;
 		case 14:
 			isHaveExtinguisher = true;
@@ -173,9 +165,6 @@ public class TileMap : MonoBehaviour {
 			for (int i = 0; i < 3; i++){
 				cams[i].backgroundColor = new Color (0.839216f,0.839216f,0.839216f);
 			}
-			break;
-		case 17:
-			AdSetting = true;
 			break;
 		case 18:
 			coinSoundSelection = 7;
@@ -281,7 +270,7 @@ public class TileMap : MonoBehaviour {
 					LerpTargetGO();
 					GameO.SetTime((float)TimeToRestart+0.9f);
 					currentScore++;
-					currentScoreText.text = ""+currentScore;
+					currentScoreText.text = "Score: "+currentScore;
 					if (currentScore > PlayerPrefs.GetInt("HighScore")){
 						breakRecordAnim.SetTrigger("Break");
 						PlayerPrefs.SetInt("HighScore", currentScore);
@@ -291,9 +280,23 @@ public class TileMap : MonoBehaviour {
 					source.PlayOneShot(coinSound[0]);
 					PlayerPrefs.SetInt("Coins",PlayerPrefs.GetInt("Coins")+AddCoin);
 					if (currGamePiece == 15)
-						AddCoin = Random.Range(-3,6);
+						AddCoin = Random.Range(-15,40);
 					coinText.text = ""+PlayerPrefs.GetInt("Coins");
 					LerpCoinGO();
+				}
+				for(int i = 1; i <= mapSizeX; i++){
+					for(int j = 1; j <= mapSizeX; j++){
+						ClickableTile temp = go[i,j].GetComponent<ClickableTile> ();
+						int _x = temp.tileX;
+						int _y = temp.tileY;
+						if ((GetSlope (playerCurrPositionX, playerCurrPositionY, _x, _y) == 2 || GetSlope (playerCurrPositionX, playerCurrPositionY, _x, _y) == 0.5 ||
+						    GetSlope (playerCurrPositionX, playerCurrPositionY, _x, _y) == -2 || GetSlope (playerCurrPositionX, playerCurrPositionY, _x, _y) == -0.5)
+						    && Vector3.Distance (new Vector3 (playerCurrPositionX, 0, playerCurrPositionY), new Vector3 (_x, 0, _y)) == Mathf.Sqrt (5.0f)) {
+							go [_x, _y].GetComponent<Renderer> ().material.color = temp.myColor.Equals ("red") ? Color.red : new Color (0.4f, 0.95f, 0.4f);
+						} else {
+							go [_x, _y].GetComponent<Renderer> ().material.color = temp.myColor.Equals ("red") ? Color.red : (temp.myColor.Equals ("white") ? Color.white : Color.black);
+						}
+					}
 				}
 			}
 		}
@@ -301,56 +304,5 @@ public class TileMap : MonoBehaviour {
 
 	public float GetSlope(float x1, float y1, float x2, float y2){
 		return (y2 - y1) / (x2 - x1);
-	}
-		
-	public void FBShare(){
-		ShareToFacebook ("http://www.facebook.com/", "Endless Knight", "Download and play Endless Knight!",
-		                 "My high score is "+PlayerPrefs.GetInt("HighScore")+" in Endless Knight. Can you beat me ;)", "http://i61.tinypic.com/2a6ryar.png"
-		                 , "http://www.facebook.com/");
-	}
-
-
-	public void TwitterShare(){
-		ShareToT ("My high score is " + PlayerPrefs.GetInt ("HighScore") + " in Endless Knight. Can you beat me ;)", "http://twitter.com/", " ","en");
-	}
-	const string AppId = "830811490287964";
-	private const string FACEBOOK_URL = "http://www.facebook.com/dialog/feed";
-	void ShareToFacebook (string linkParameter, string nameParameter, string captionParameter, string descriptionParameter, string pictureParameter, string redirectParameter)
-	{
-		Application.OpenURL (FACEBOOK_URL + "?app_id=" + AppId +
-		                     "&link=" + WWW.EscapeURL(linkParameter) +
-		                     "&name=" + WWW.EscapeURL(nameParameter) +
-		                     "&caption=" + WWW.EscapeURL(captionParameter) + 
-		                     "&description=" + WWW.EscapeURL(descriptionParameter) + 
-		                     "&picture=" + WWW.EscapeURL(pictureParameter) + 
-		                     "&redirect_uri=" + WWW.EscapeURL(redirectParameter));
-	}
-
-	const string Address = "http://twitter.com/intent/tweet";
-	public static void ShareToT(string text, string url,
-	                         string related, string lang="en")
-	{
-		Application.OpenURL(Address +
-		                    "?text=" + WWW.EscapeURL(text) +
-		                    "&amp;url=" + WWW.EscapeURL(url) +
-		                    "&amp;related=" + WWW.EscapeURL(related) +
-		                    "&amp;lang=" + WWW.EscapeURL(lang));
-	}
-
-
-	public static bool TestConnection()
-	{
-		try
-		{
-			using (WebClient client = new WebClient())
-				using (var stream = client.OpenRead("http://www.google.com"))
-			{
-				return true;
-			}
-		}
-		catch
-		{
-			return false;
-		}
 	}
 }
